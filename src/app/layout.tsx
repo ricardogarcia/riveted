@@ -60,6 +60,24 @@ export default function RootLayout({
         <Footer />
 
         <Script
+          id="gtag"
+          strategy="afterInteractive"
+          src="https://www.googletagmanager.com/gtag/js?id=G-Q133ZQR65D"
+        />
+        <Script
+          id="gtag-init"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-Q133ZQR65D');
+            `,
+          }}
+        />
+
+        <Script
           id="intercom"
           strategy="afterInteractive"
           dangerouslySetInnerHTML={{
