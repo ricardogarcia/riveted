@@ -54,19 +54,15 @@ export default function RootLayout({
       lang="en"
       className={`${dmSans.variable} ${bebasNeue.variable} ${instrumentSerif.variable} antialiased`}
     >
-      <body className="min-h-screen flex flex-col bg-background text-foreground">
-        <Navbar />
-        <main className="flex-1">{children}</main>
-        <Footer />
-
+      <head>
         <Script
           id="gtag"
-          strategy="afterInteractive"
+          strategy="beforeInteractive"
           src="https://www.googletagmanager.com/gtag/js?id=G-Q133ZQR65D"
         />
         <Script
           id="gtag-init"
-          strategy="afterInteractive"
+          strategy="beforeInteractive"
           dangerouslySetInnerHTML={{
             __html: `
               window.dataLayer = window.dataLayer || [];
@@ -76,6 +72,11 @@ export default function RootLayout({
             `,
           }}
         />
+      </head>
+      <body className="min-h-screen flex flex-col bg-background text-foreground">
+        <Navbar />
+        <main className="flex-1">{children}</main>
+        <Footer />
 
         <Script
           id="intercom"
