@@ -42,6 +42,13 @@ export const metadata: Metadata = {
   icons: {
     icon: "/images/favicon.svg",
   },
+  openGraph: {
+    title: "Riveted, Inc. — AI-Powered Websites & Web App Consulting",
+    description:
+      "We build AI-powered websites for small businesses and partner with founders to design, build, and ship production-grade web applications.",
+    siteName: "Riveted, Inc.",
+    type: "website",
+  },
 };
 
 export default function RootLayout({
