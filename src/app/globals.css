@@ -1,0 +1,47 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-background: var(--background);
+  --color-background-alt: var(--background-alt);
+  --color-foreground: var(--foreground);
+  --color-foreground-light: var(--foreground-light);
+  --color-rivet: var(--rivet-color);
+  --color-rivet-light: var(--rivet-light-color);
+  --color-border-color: var(--border-color);
+  --color-border-light: var(--border-light-color);
+
+  --font-sans: var(--font-dm-sans);
+  --font-display: var(--font-bebas-neue);
+  --font-serif: var(--font-instrument-serif);
+}
+
+:root {
+  --background: #faf9f6;
+  --background-alt: #f0ede6;
+  --foreground: #1a1a1a;
+  --foreground-light: #444444;
+  --rivet-color: #b8942e;
+  --rivet-light-color: #d4ad3a;
+  --border-color: #d6d3cc;
+  --border-light-color: #e8e5de;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), system-ui, sans-serif;
+}
+
+::selection {
+  background-color: rgba(184, 148, 46, 0.2);
+  color: #1a1a1a;
+}
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 20px rgba(184, 148, 46, 0.15); }
+  50% { box-shadow: 0 0 35px rgba(184, 148, 46, 0.35); }
+}

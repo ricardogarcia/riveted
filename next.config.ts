@@ -1,0 +1,23 @@
+import type { NextConfig } from "next";
+import path from "path";
+import { fileURLToPath } from "url";
+
+const __filename = fileURLToPath(import.meta.url);
+const projectRoot = path.dirname(__filename);
+
+const nextConfig: NextConfig = {
+  output: "standalone",
+  turbopack: {
+    root: projectRoot,
+  },
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "rivetedinc.com",
+      },
+    ],
+  },
+};
+
+export default nextConfig;
