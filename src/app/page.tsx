@@ -4,10 +4,10 @@ import SectionDivider from "@/components/SectionDivider";
 export default function Home() {
   return (
     <>
-      {/* ── HERO ── */}
+      {/* ── APPROACH (HERO) ── */}
       <section
-        id="services"
-        className="relative min-h-screen flex flex-col justify-center px-4 sm:px-8 lg:px-16 pt-32 pb-20 overflow-hidden"
+        id="approach"
+        className="relative min-h-screen flex items-center px-4 sm:px-8 lg:px-16 pt-32 pb-20 overflow-hidden"
       >
         {/* Background gradients */}
         <div className="absolute inset-0 pointer-events-none">
@@ -15,19 +15,106 @@ export default function Home() {
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_50%_70%_at_10%_90%,rgba(184,148,46,0.03),transparent)]" />
         </div>
 
-        {/* Rivet corner decorations */}
-        <div className="absolute top-[100px] right-8 lg:right-16 w-2 h-2 rounded-full bg-[radial-gradient(circle_at_35%_35%,#d4ad3a,#b8942e)] shadow-[0_0_6px_rgba(184,148,46,0.2)]" />
-        <div className="absolute bottom-16 right-8 lg:right-16 w-2 h-2 rounded-full bg-[radial-gradient(circle_at_35%_35%,#d4ad3a,#b8942e)] shadow-[0_0_6px_rgba(184,148,46,0.2)]" />
-        <div className="absolute bottom-16 left-8 lg:left-16 w-2 h-2 rounded-full bg-[radial-gradient(circle_at_35%_35%,#d4ad3a,#b8942e)] shadow-[0_0_6px_rgba(184,148,46,0.2)]" />
+        <div className="relative mx-auto max-w-7xl w-full grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-center">
+          {/* Bridge Diagram */}
+          <FadeIn direction="left">
+            <div className="relative h-[280px] sm:h-[350px]">
+              <div className="absolute inset-0 flex items-center justify-center">
+                {/* Left box */}
+                <div className="w-36 sm:w-40 h-48 sm:h-52 border border-border-color bg-white flex items-center justify-center flex-col gap-2 border-r-0">
+                  <span className="text-3xl opacity-70">📊</span>
+                  <span className="font-display text-sm tracking-[0.2em] text-foreground-light">
+                    BUSINESS
+                  </span>
+                </div>
+                {/* Center */}
+                <div className="w-24 sm:w-28 h-48 sm:h-52 flex items-center justify-center relative">
+                  {/* Horizontal lines */}
+                  <div className="absolute top-0 left-0 right-0 h-px bg-border-color" />
+                  <div className="absolute bottom-0 left-0 right-0 h-px bg-border-color" />
+                  {/* Vertical line */}
+                  <div className="absolute top-0 bottom-0 left-1/2 w-px bg-gradient-to-b from-transparent via-rivet to-transparent" />
+                  {/* Pulsing circle */}
+                  <div className="w-10 h-10 rounded-full bg-rivet relative z-10 animate-[pulse-glow_3s_infinite]" />
+                  {/* AI label */}
+                  <span className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 font-display text-[0.75rem] tracking-[0.3em] text-rivet z-20 bg-background px-2">
+                    A I
+                  </span>
+                </div>
+                {/* Right box */}
+                <div className="w-36 sm:w-40 h-48 sm:h-52 border border-border-color bg-white flex items-center justify-center flex-col gap-2 border-l-0">
+                  <span className="text-3xl opacity-70">⚙️</span>
+                  <span className="font-display text-sm tracking-[0.2em] text-foreground-light">
+                    ENGINEERING
+                  </span>
+                </div>
+              </div>
+            </div>
+          </FadeIn>
 
+          {/* Content */}
+          <div>
+            <FadeIn>
+              <div className="text-[0.75rem] font-semibold tracking-[0.25em] uppercase text-rivet mb-4 flex items-center gap-3">
+                <span className="w-8 h-px bg-rivet" />
+                Why Riveted
+              </div>
+              <h1 className="font-serif text-[clamp(2.4rem,4vw,3.6rem)] text-foreground mb-6 max-w-[650px] font-normal leading-[1.1]">
+                Built by engineers. Designed for business owners.
+              </h1>
+            </FadeIn>
+            <FadeIn delay={0.1}>
+              <p className="text-[1.05rem] leading-[1.9] text-foreground-light mb-5">
+                Most agencies are either business strategists who can&apos;t
+                ship, or engineers who can&apos;t communicate value. Riveted
+                was built by leaders who&apos;ve operated at the intersection
+                — shipping products at Google, scaling engineering teams at
+                startups, and building AI-powered tools from scratch.
+              </p>
+              <p className="text-[1.05rem] leading-[1.9] text-foreground-light">
+                Whether we&apos;re building your small business a site that
+                drives leads, or architecting an AI product with your team —
+                we bring the same engineering rigor and business sense to
+                everything we do.
+              </p>
+            </FadeIn>
+            <FadeIn delay={0.2}>
+              <div className="flex flex-wrap gap-8 sm:gap-12 mt-10 pt-6 border-t border-border-light">
+                {[
+                  { number: "15+", label: "Years in engineering & leadership" },
+                  { number: "10×", label: "Faster delivery with AI tooling" },
+                  { number: "100%", label: "Built to drive results" },
+                ].map((stat) => (
+                  <div key={stat.label}>
+                    <div className="font-display text-[2.5rem] leading-none text-rivet">
+                      {stat.number}
+                    </div>
+                    <div className="text-sm text-foreground-light mt-1">
+                      {stat.label}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </FadeIn>
+          </div>
+        </div>
+      </section>
+
+      <SectionDivider />
+
+      {/* ── SERVICES ── */}
+      <section
+        id="services"
+        className="relative py-16 sm:py-24 px-4 sm:px-8 lg:px-16 overflow-hidden"
+      >
         <div className="relative mx-auto max-w-7xl w-full">
           {/* Headline */}
           <FadeIn>
             <div className="mb-16">
-              <h1 className="font-serif text-[clamp(2.8rem,5.5vw,5rem)] leading-[1.1] text-foreground max-w-[700px] font-normal">
+              <h2 className="font-serif text-[clamp(2.8rem,5.5vw,5rem)] leading-[1.1] text-foreground max-w-[700px] font-normal">
                 AI-powered websites and products{" "}
                 <em className="italic text-rivet">that shine.</em>
-              </h1>
+              </h2>
             </div>
           </FadeIn>
 
@@ -379,98 +466,6 @@ export default function Home() {
               </div>
             </div>
           </FadeIn>
-        </div>
-      </section>
-
-      <SectionDivider />
-
-      {/* ── APPROACH ── */}
-      <section
-        id="approach"
-        className="py-16 sm:py-24 px-4 sm:px-8 lg:px-16"
-      >
-        <div className="mx-auto max-w-7xl grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-center">
-          {/* Bridge Diagram */}
-          <FadeIn direction="left">
-            <div className="relative h-[280px] sm:h-[350px]">
-              <div className="absolute inset-0 flex items-center justify-center">
-                {/* Left box */}
-                <div className="w-36 sm:w-40 h-48 sm:h-52 border border-border-color bg-white flex items-center justify-center flex-col gap-2 border-r-0">
-                  <span className="text-3xl opacity-70">📊</span>
-                  <span className="font-display text-sm tracking-[0.2em] text-foreground-light">
-                    BUSINESS
-                  </span>
-                </div>
-                {/* Center */}
-                <div className="w-24 sm:w-28 h-48 sm:h-52 flex items-center justify-center relative">
-                  {/* Horizontal lines */}
-                  <div className="absolute top-0 left-0 right-0 h-px bg-border-color" />
-                  <div className="absolute bottom-0 left-0 right-0 h-px bg-border-color" />
-                  {/* Vertical line */}
-                  <div className="absolute top-0 bottom-0 left-1/2 w-px bg-gradient-to-b from-transparent via-rivet to-transparent" />
-                  {/* Pulsing circle */}
-                  <div className="w-10 h-10 rounded-full bg-rivet relative z-10 animate-[pulse-glow_3s_infinite]" />
-                  {/* AI label */}
-                  <span className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 font-display text-[0.75rem] tracking-[0.3em] text-rivet z-20 bg-background px-2">
-                    A I
-                  </span>
-                </div>
-                {/* Right box */}
-                <div className="w-36 sm:w-40 h-48 sm:h-52 border border-border-color bg-white flex items-center justify-center flex-col gap-2 border-l-0">
-                  <span className="text-3xl opacity-70">⚙️</span>
-                  <span className="font-display text-sm tracking-[0.2em] text-foreground-light">
-                    ENGINEERING
-                  </span>
-                </div>
-              </div>
-            </div>
-          </FadeIn>
-
-          {/* Content */}
-          <div>
-            <FadeIn>
-              <div className="text-[0.75rem] font-semibold tracking-[0.25em] uppercase text-rivet mb-4 flex items-center gap-3">
-                <span className="w-8 h-px bg-rivet" />
-                Why Riveted
-              </div>
-              <h2 className="font-serif text-[clamp(2rem,3.5vw,3.2rem)] text-foreground mb-6 max-w-[650px] font-normal">
-                Built by engineers. Designed for business owners.
-              </h2>
-            </FadeIn>
-            <FadeIn delay={0.1}>
-              <p className="text-[1.05rem] leading-[1.9] text-foreground-light mb-5">
-                Most agencies are either business strategists who can&apos;t
-                ship, or engineers who can&apos;t communicate value. Riveted
-                was built by leaders who&apos;ve operated at the intersection
-                — shipping products at Google, scaling engineering teams at
-                startups, and building AI-powered tools from scratch.
-              </p>
-              <p className="text-[1.05rem] leading-[1.9] text-foreground-light">
-                Whether we&apos;re building your small business a site that
-                drives leads, or architecting an AI product with your team —
-                we bring the same engineering rigor and business sense to
-                everything we do.
-              </p>
-            </FadeIn>
-            <FadeIn delay={0.2}>
-              <div className="flex flex-wrap gap-8 sm:gap-12 mt-10 pt-6 border-t border-border-light">
-                {[
-                  { number: "15+", label: "Years in engineering & leadership" },
-                  { number: "10×", label: "Faster delivery with AI tooling" },
-                  { number: "100%", label: "Built to drive results" },
-                ].map((stat) => (
-                  <div key={stat.label}>
-                    <div className="font-display text-[2.5rem] leading-none text-rivet">
-                      {stat.number}
-                    </div>
-                    <div className="text-sm text-foreground-light mt-1">
-                      {stat.label}
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </FadeIn>
-          </div>
         </div>
       </section>
 
