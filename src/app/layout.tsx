@@ -25,6 +25,7 @@ const instrumentSerif = Instrument_Serif({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://rivetedinc.com"),
   title: "Riveted, Inc. — AI-Powered Websites & Web App Consulting",
   description:
     "We build AI-powered websites for small businesses and partner with founders to design, build, and ship production-grade web applications.",
@@ -46,8 +47,15 @@ export const metadata: Metadata = {
     title: "Riveted, Inc. — AI-Powered Websites & Web App Consulting",
     description:
       "We build AI-powered websites for small businesses and partner with founders to design, build, and ship production-grade web applications.",
+    url: "https://rivetedinc.com",
     siteName: "Riveted, Inc.",
     type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Riveted, Inc. — AI-Powered Websites & Web App Consulting",
+    description:
+      "We build AI-powered websites for small businesses and partner with founders to design, build, and ship production-grade web applications.",
   },
 };
 
