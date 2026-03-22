@@ -15,7 +15,15 @@ export default function Home() {
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_50%_70%_at_10%_90%,rgba(184,148,46,0.03),transparent)]" />
         </div>
 
-        <div className="relative mx-auto max-w-7xl w-full grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-center">
+        <div className="relative mx-auto max-w-7xl w-full">
+          <FadeIn>
+            <h1 className="font-serif text-[clamp(2.8rem,5.5vw,5rem)] leading-[1.1] text-foreground max-w-[700px] font-normal mb-16">
+              AI-powered websites and products{" "}
+              <em className="italic text-rivet">that shine.</em>
+            </h1>
+          </FadeIn>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-center">
           {/* Bridge Diagram */}
           <FadeIn direction="left">
             <div className="relative h-[280px] sm:h-[350px]">
@@ -59,9 +67,9 @@ export default function Home() {
                 <span className="w-8 h-px bg-rivet" />
                 Why Riveted
               </div>
-              <h1 className="font-serif text-[clamp(2.4rem,4vw,3.6rem)] text-foreground mb-6 max-w-[650px] font-normal leading-[1.1]">
+              <h2 className="font-serif text-[clamp(2.4rem,4vw,3.6rem)] text-foreground mb-6 max-w-[650px] font-normal leading-[1.1]">
                 Built by engineers. Designed for business owners.
-              </h1>
+              </h2>
             </FadeIn>
             <FadeIn delay={0.1}>
               <p className="text-[1.05rem] leading-[1.9] text-foreground-light mb-5">
@@ -97,6 +105,7 @@ export default function Home() {
               </div>
             </FadeIn>
           </div>
+          </div>
         </div>
       </section>
 
@@ -112,8 +121,7 @@ export default function Home() {
           <FadeIn>
             <div className="mb-16">
               <h2 className="font-serif text-[clamp(2.8rem,5.5vw,5rem)] leading-[1.1] text-foreground max-w-[700px] font-normal">
-                AI-powered websites and products{" "}
-                <em className="italic text-rivet">that shine.</em>
+                What We Build
               </h2>
             </div>
           </FadeIn>
