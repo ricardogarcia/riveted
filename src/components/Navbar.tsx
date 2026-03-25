@@ -8,6 +8,7 @@ const navLinks = [
   { href: "#smb", label: "Small Business" },
   { href: "#consulting", label: "Consulting" },
   { href: "#approach", label: "Approach" },
+  { href: "#about", label: "About" },
   { href: "#contact", label: "Contact" },
 ];
 

@@ -501,6 +501,111 @@ export default function Home() {
 
       <SectionDivider />
 
+      {/* ── BIO / MEET YOUR COACH ── */}
+      <section
+        id="about"
+        className="py-16 sm:py-24 px-4 sm:px-8 lg:px-16 bg-background-alt"
+      >
+        <div className="mx-auto max-w-7xl">
+          <FadeIn>
+            <div className="text-[0.75rem] font-semibold tracking-[0.25em] uppercase text-rivet mb-4 flex items-center gap-3">
+              <span className="w-8 h-px bg-rivet" />
+              Meet Your Coach
+            </div>
+            <h2 className="font-serif text-[clamp(2.4rem,4vw,3.6rem)] text-foreground mb-2 font-normal leading-[1.1]">
+              Ricky Garcia
+            </h2>
+            <p className="text-[1.1rem] text-foreground-light mb-12">
+              Engineering leader. Builder. Operator.
+            </p>
+          </FadeIn>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20">
+            {/* Bio */}
+            <FadeIn delay={0.1} direction="left">
+              <div>
+                <p className="text-[1.05rem] leading-[1.9] text-foreground-light mb-5">
+                  Ricky has spent 8+ years leading engineering teams across every
+                  stage of company growth — from Google to Series B to seed-stage
+                  CTO — and has the scars and playbooks to prove it.
+                </p>
+                <p className="text-[1.05rem] leading-[1.9] text-foreground-light mb-5">
+                  At Google, he managed cross-functional developer tools on
+                  YouTube Ads, drove multi-year technical roadmaps, and coached
+                  engineers through promotions and career growth. At LeaseLock, he
+                  scaled the engineering org from 1 engineer (himself) to 23,
+                  growing alongside the company from seed to Series B — making
+                  architecture, hiring, and product decisions with high autonomy
+                  and minimal structure. As CTO of Bend, he shipped a production
+                  platform handling $20M+ in collections within 10 months, doubled
+                  PR throughput by adopting AI-assisted development workflows, and
+                  delivered a partner integration so fast the client called
+                  it &ldquo;record time.&rdquo;
+                </p>
+                <p className="text-[1.05rem] leading-[1.9] text-foreground-light mb-5">
+                  Most recently, he solo-built and launched WeatherFreight — an
+                  AI-native Shopify app — end-to-end using Claude Code, going from
+                  idea to the Shopify App Store with no PM, no designer, and no
+                  co-engineers.
+                </p>
+                <p className="text-[1.05rem] leading-[1.9] text-foreground-light">
+                  He&apos;s not here to give you a framework deck. He&apos;s here
+                  because he&apos;s done the work — built the teams, shipped the
+                  products, navigated the chaos — and he can help your team move
+                  faster, ship smarter, and scale without breaking.
+                </p>
+              </div>
+            </FadeIn>
+
+            {/* Credential Highlights */}
+            <FadeIn delay={0.2} direction="right">
+              <div className="space-y-4">
+                {[
+                  {
+                    title: "MIT",
+                    desc: "B.S. in Computer Science & Engineering",
+                  },
+                  {
+                    title: "Caltech",
+                    desc: "AI & Machine Learning Certificate",
+                  },
+                  {
+                    title: "Google",
+                    desc: "YouTube Ads — cross-functional developer tools & multi-year roadmaps",
+                  },
+                  {
+                    title: "LeaseLock",
+                    desc: "Scaled engineering from 1 to 23, seed through Series B",
+                  },
+                  {
+                    title: "Bend (CTO)",
+                    desc: "$20M+ production platform shipped in 10 months",
+                  },
+                  {
+                    title: "WeatherFreight",
+                    desc: "Solo-built AI Shopify app, idea to App Store",
+                  },
+                ].map((item) => (
+                  <div
+                    key={item.title}
+                    className="flex gap-4 items-start p-4 bg-white border border-border-light"
+                  >
+                    <span className="font-display text-[0.85rem] tracking-[0.1em] text-rivet min-w-[110px] pt-0.5">
+                      {item.title}
+                    </span>
+                    <span className="text-[0.95rem] leading-[1.6] text-foreground-light">
+                      {item.desc}
+                    </span>
+                  </div>
+                ))}
+              </div>
+            </FadeIn>
+          </div>
+        </div>
+      </section>
+
+      <SectionDivider />
+
       {/* ── FOOTER CTA ── */}
       <section
         id="contact"
