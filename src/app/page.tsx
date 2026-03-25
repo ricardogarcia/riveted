@@ -281,7 +281,7 @@ export default function Home() {
                 </div>
                 <div className="text-[0.95rem] leading-[1.75] text-foreground-light space-y-4">
                   <p>
-                    Ricky has spent 8+ years leading engineering teams across
+                    Ricky has spent 15+ years leading engineering teams across
                     every stage of company growth — and has the playbooks to
                     prove it.
                   </p>
