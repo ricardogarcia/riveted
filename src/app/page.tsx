@@ -222,6 +222,193 @@ export default function Home() {
               </div>
             </div>
           </FadeIn>
+
+          {/* Track 3: Engineering Coaching */}
+          <FadeIn delay={0.3}>
+            <div
+              id="coaching"
+              className="mt-8 bg-white border border-border-light p-8 sm:p-10 transition-all duration-400 hover:border-border-color hover:shadow-[0_4px_24px_rgba(0,0,0,0.04)]"
+            >
+              <div className="font-display text-[3.5rem] leading-none text-rivet/15 mb-4">
+                03
+              </div>
+              <span className="inline-block text-[0.65rem] font-semibold tracking-[0.15em] uppercase text-rivet px-3 py-1.5 border border-rivet/25 mb-6">
+                For Engineering Teams
+              </span>
+              <h3 className="font-serif text-[1.8rem] text-foreground mb-2 font-normal">
+                Engineering Coaching
+              </h3>
+              <p className="font-serif text-[clamp(1.4rem,2.5vw,1.8rem)] text-foreground-light mb-8 font-normal">
+                Engineering coaching that{" "}
+                <em className="italic text-rivet">actually ships.</em>
+              </p>
+
+              {/* Stats */}
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
+                {[
+                  { number: "1→23", label: "Engineers scaled" },
+                  { number: "2×", label: "PR throughput gained" },
+                  { number: "$20M+", label: "Platform volume in 10 mo" },
+                ].map((stat) => (
+                  <div
+                    key={stat.label}
+                    className="text-center p-5 border border-border-light bg-background"
+                  >
+                    <div className="font-display text-[clamp(1.5rem,2.5vw,2rem)] leading-none text-rivet">
+                      {stat.number}
+                    </div>
+                    <div className="text-sm text-foreground-light mt-1.5">
+                      {stat.label}
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              {/* Bio */}
+              <div className="border border-border-light bg-background-alt p-6 sm:p-8 mb-8">
+                <div className="flex items-center gap-4 mb-5">
+                  <div className="w-14 h-14 rounded-full bg-gradient-to-br from-rivet to-rivet-light flex items-center justify-center font-semibold text-lg text-white shrink-0">
+                    RG
+                  </div>
+                  <div>
+                    <div className="text-lg font-medium text-foreground">
+                      Ricky Garcia
+                    </div>
+                    <div className="text-sm text-foreground-light">
+                      Founder, Riveted · MIT CS · Caltech AI/ML
+                    </div>
+                  </div>
+                </div>
+                <div className="text-[0.95rem] leading-[1.75] text-foreground-light space-y-4">
+                  <p>
+                    Ricky has spent 8+ years leading engineering teams across
+                    every stage of company growth — and has the playbooks to
+                    prove it.
+                  </p>
+                  <p>
+                    At{" "}
+                    <strong className="text-foreground font-medium">
+                      Google
+                    </strong>
+                    , he managed cross-functional developer tools on YouTube Ads,
+                    drove multi-year technical roadmaps, and coached engineers
+                    through promotions. At{" "}
+                    <strong className="text-foreground font-medium">
+                      LeaseLock
+                    </strong>{" "}
+                    (Series B), he scaled the engineering org from 1
+                    engineer — himself — to 23, making architecture, hiring, and
+                    product decisions with high autonomy. As{" "}
+                    <strong className="text-foreground font-medium">
+                      CTO of Bend
+                    </strong>{" "}
+                    (seed stage), he shipped a production platform handling $20M+
+                    in collections in 10 months, doubled PR throughput with
+                    AI-assisted workflows, and delivered a partner integration
+                    the client called &ldquo;record time.&rdquo;
+                  </p>
+                  <p>
+                    He&apos;s not here to hand you a framework deck. He&apos;s
+                    done the work — built the teams, shipped the products,
+                    navigated the chaos — and he&apos;ll help your team do the
+                    same.
+                  </p>
+                </div>
+                <div className="flex flex-wrap gap-1.5 mt-6">
+                  {[
+                    "Google / YouTube Ads",
+                    "Series B VP Eng",
+                    "Seed-Stage CTO",
+                    "AI-Native Builder",
+                    "MIT · Caltech",
+                  ].map((cred) => (
+                    <span
+                      key={cred}
+                      className="text-[0.65rem] font-medium px-2.5 py-1 bg-background text-foreground-light rounded-sm border border-border-light"
+                    >
+                      {cred}
+                    </span>
+                  ))}
+                </div>
+              </div>
+
+              {/* Service Pillars */}
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                {[
+                  {
+                    num: "01",
+                    title: "Velocity & Efficiency",
+                    desc: "Ship faster without burning out your team. We audit your development lifecycle and implement the workflows, tooling, and AI-assisted practices that eliminate drag.",
+                    items: [
+                      "Sprint and delivery process optimization",
+                      "AI coding tool adoption (Claude Code, CodeRabbit, Copilot)",
+                      "Code review and CI/CD pipeline tuning",
+                      "Developer experience and tooling audits",
+                    ],
+                  },
+                  {
+                    num: "02",
+                    title: "Value & Prioritization",
+                    desc: "Stop building the wrong things. We help engineering leaders align technical work to business outcomes — so every sprint delivers customer value, not just story points.",
+                    items: [
+                      "OKR and roadmap alignment with product/business",
+                      "Technical debt triage and paydown strategy",
+                      "Cross-functional stakeholder engagement",
+                      "Build vs. buy decision frameworks",
+                    ],
+                  },
+                  {
+                    num: "03",
+                    title: "Scale & Team Growth",
+                    desc: "Grow your team without losing speed. From your first hire to your twentieth, we bring the lessons from scaling orgs through seed, Series A, and Series B.",
+                    items: [
+                      "Hiring playbooks and interview design",
+                      "Engineering ladder and career frameworks",
+                      "1:1 coaching, PIPs, and performance management",
+                      "On-call, incident response, and team structure",
+                    ],
+                  },
+                ].map((pillar) => (
+                  <div
+                    key={pillar.num}
+                    className="border border-border-light p-5 bg-background"
+                  >
+                    <div className="font-display text-[2rem] leading-none text-rivet/15 mb-2">
+                      {pillar.num}
+                    </div>
+                    <h4 className="text-base font-medium text-foreground mb-2">
+                      {pillar.title}
+                    </h4>
+                    <p className="text-sm leading-[1.65] text-foreground-light mb-4">
+                      {pillar.desc}
+                    </p>
+                    <ul className="space-y-0">
+                      {pillar.items.map((item) => (
+                        <li
+                          key={item}
+                          className="flex items-baseline gap-2 text-sm text-foreground-light py-1.5 border-b border-border-light last:border-b-0"
+                        >
+                          <span className="text-rivet font-bold text-sm shrink-0">
+                            ✓
+                          </span>
+                          {item}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                ))}
+              </div>
+
+              <div className="text-sm text-foreground-light italic pt-4 border-t border-border-light">
+                <strong className="not-italic text-foreground">
+                  Best for:
+                </strong>{" "}
+                Seed to Series B startups with 2–30 engineers who need to move
+                faster, hire smarter, and ship what matters — without the
+                overhead of a full-time VP of Engineering.
+              </div>
+            </div>
+          </FadeIn>
         </div>
       </section>
 
@@ -496,111 +683,6 @@ export default function Home() {
             </p>
             <p className="text-xs text-[#999] mt-1">Prima Pave</p>
           </FadeIn>
-        </div>
-      </section>
-
-      <SectionDivider />
-
-      {/* ── BIO / MEET YOUR COACH ── */}
-      <section
-        id="about"
-        className="py-16 sm:py-24 px-4 sm:px-8 lg:px-16 bg-background-alt"
-      >
-        <div className="mx-auto max-w-7xl">
-          <FadeIn>
-            <div className="text-[0.75rem] font-semibold tracking-[0.25em] uppercase text-rivet mb-4 flex items-center gap-3">
-              <span className="w-8 h-px bg-rivet" />
-              Meet Your Coach
-            </div>
-            <h2 className="font-serif text-[clamp(2.4rem,4vw,3.6rem)] text-foreground mb-2 font-normal leading-[1.1]">
-              Ricky Garcia
-            </h2>
-            <p className="text-[1.1rem] text-foreground-light mb-12">
-              Engineering leader. Builder. Operator.
-            </p>
-          </FadeIn>
-
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20">
-            {/* Bio */}
-            <FadeIn delay={0.1} direction="left">
-              <div>
-                <p className="text-[1.05rem] leading-[1.9] text-foreground-light mb-5">
-                  Ricky has spent 8+ years leading engineering teams across every
-                  stage of company growth — from Google to Series B to seed-stage
-                  CTO — and has the scars and playbooks to prove it.
-                </p>
-                <p className="text-[1.05rem] leading-[1.9] text-foreground-light mb-5">
-                  At Google, he managed cross-functional developer tools on
-                  YouTube Ads, drove multi-year technical roadmaps, and coached
-                  engineers through promotions and career growth. At LeaseLock, he
-                  scaled the engineering org from 1 engineer (himself) to 23,
-                  growing alongside the company from seed to Series B — making
-                  architecture, hiring, and product decisions with high autonomy
-                  and minimal structure. As CTO of Bend, he shipped a production
-                  platform handling $20M+ in collections within 10 months, doubled
-                  PR throughput by adopting AI-assisted development workflows, and
-                  delivered a partner integration so fast the client called
-                  it &ldquo;record time.&rdquo;
-                </p>
-                <p className="text-[1.05rem] leading-[1.9] text-foreground-light mb-5">
-                  Most recently, he solo-built and launched WeatherFreight — an
-                  AI-native Shopify app — end-to-end using Claude Code, going from
-                  idea to the Shopify App Store with no PM, no designer, and no
-                  co-engineers.
-                </p>
-                <p className="text-[1.05rem] leading-[1.9] text-foreground-light">
-                  He&apos;s not here to give you a framework deck. He&apos;s here
-                  because he&apos;s done the work — built the teams, shipped the
-                  products, navigated the chaos — and he can help your team move
-                  faster, ship smarter, and scale without breaking.
-                </p>
-              </div>
-            </FadeIn>
-
-            {/* Credential Highlights */}
-            <FadeIn delay={0.2} direction="right">
-              <div className="space-y-4">
-                {[
-                  {
-                    title: "MIT",
-                    desc: "B.S. in Computer Science & Engineering",
-                  },
-                  {
-                    title: "Caltech",
-                    desc: "AI & Machine Learning Certificate",
-                  },
-                  {
-                    title: "Google",
-                    desc: "YouTube Ads — cross-functional developer tools & multi-year roadmaps",
-                  },
-                  {
-                    title: "LeaseLock",
-                    desc: "Scaled engineering from 1 to 23, seed through Series B",
-                  },
-                  {
-                    title: "Bend (CTO)",
-                    desc: "$20M+ production platform shipped in 10 months",
-                  },
-                  {
-                    title: "WeatherFreight",
-                    desc: "Solo-built AI Shopify app, idea to App Store",
-                  },
-                ].map((item) => (
-                  <div
-                    key={item.title}
-                    className="flex gap-4 items-start p-4 bg-white border border-border-light"
-                  >
-                    <span className="font-display text-[0.85rem] tracking-[0.1em] text-rivet min-w-[110px] pt-0.5">
-                      {item.title}
-                    </span>
-                    <span className="text-[0.95rem] leading-[1.6] text-foreground-light">
-                      {item.desc}
-                    </span>
-                  </div>
-                ))}
-              </div>
-            </FadeIn>
-          </div>
         </div>
       </section>
 
