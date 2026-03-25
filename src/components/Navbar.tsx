@@ -2,14 +2,16 @@
 
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import Link from "next/link";
 
 const navLinks = [
-  { href: "#services", label: "Services" },
-  { href: "#smb", label: "Small Business" },
-  { href: "#consulting", label: "Consulting" },
-  { href: "#coaching", label: "Coaching" },
-  { href: "#approach", label: "Approach" },
-  { href: "#contact", label: "Contact" },
+  { href: "/#approach", label: "Approach" },
+  { href: "/#services", label: "Services" },
+  { href: "/#smb", label: "Small Business" },
+  { href: "/#consulting", label: "Consulting" },
+  { href: "/#coaching", label: "Coaching" },
+  { href: "/blog", label: "Blog" },
+  { href: "/#contact", label: "Contact" },
 ];
 
 export default function Navbar() {
@@ -41,25 +43,25 @@ export default function Navbar() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="flex h-18 items-center justify-between">
             {/* Logo */}
-            <a href="#" className="flex items-center gap-2.5">
+            <Link href="/" className="flex items-center gap-2.5">
               <div className="relative w-2.5 h-2.5 rounded-full bg-rivet shadow-[0_0_6px_rgba(184,148,46,0.4)]">
                 <div className="absolute inset-[2px] rounded-full bg-[radial-gradient(circle_at_35%_35%,rgba(255,255,255,0.4),transparent)]" />
               </div>
               <span className="font-display text-[1.6rem] tracking-[0.15em] text-foreground">
                 RIVETED, INC.
               </span>
-            </a>
+            </Link>
 
             {/* Desktop Links */}
             <ul className="hidden lg:flex items-center gap-8">
               {navLinks.map((link) => (
                 <li key={link.href}>
-                  <a
+                  <Link
                     href={link.href}
                     className="text-foreground-light text-[0.82rem] font-medium tracking-[0.08em] uppercase transition-colors hover:text-rivet"
                   >
                     {link.label}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -122,13 +124,13 @@ export default function Navbar() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: i * 0.05 + 0.1 }}
                 >
-                  <a
+                  <Link
                     href={link.href}
                     onClick={() => setMobileOpen(false)}
                     className="block px-6 py-3 text-xl font-medium text-foreground-light hover:text-rivet transition-colors"
                   >
                     {link.label}
-                  </a>
+                  </Link>
                 </motion.div>
               ))}
               <motion.a
