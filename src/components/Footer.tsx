@@ -1,10 +1,11 @@
 import Link from "next/link";
 
 const footerLinks = [
+  { href: "/#approach", label: "Approach" },
   { href: "/#services", label: "Services" },
   { href: "/#smb", label: "Small Business" },
   { href: "/#consulting", label: "Consulting" },
-  { href: "/#approach", label: "Approach" },
+  { href: "/#coaching", label: "Coaching" },
   { href: "/blog", label: "Blog" },
   { href: "mailto:hello@rivetedinc.com", label: "Contact" },
 ];
