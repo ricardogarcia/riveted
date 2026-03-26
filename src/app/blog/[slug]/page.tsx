@@ -3,8 +3,10 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getAllPosts, getPostBySlug } from "@/lib/blog";
 import BlogContent_ApiFirstWorkflow from "@/components/BlogContent_ApiFirstWorkflow";
+import BlogContent_TechnicalCoFounder from "@/components/BlogContent_TechnicalCoFounder";
 
 const contentMap: Record<string, React.ComponentType> = {
+  "what-to-look-for-in-a-technical-co-founder": BlogContent_TechnicalCoFounder,
   "api-first-development-workflow": BlogContent_ApiFirstWorkflow,
 };
 

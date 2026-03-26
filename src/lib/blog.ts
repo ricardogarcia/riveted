@@ -10,6 +10,17 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
+    slug: "what-to-look-for-in-a-technical-co-founder",
+    title: "What to Look for in a Technical Co-Founder",
+    excerpt:
+      "Sixty days from first conversation to Shopify App Store. Two people, no funding, no engineering team. Here is what made that partnership work and the three questions you should ask before choosing your technical counterpart.",
+    date: "2026-03-26",
+    readTimeMinutes: 5,
+    tags: ["Founders", "Startups", "Product", "AI"],
+    ogDescription:
+      "What actually matters when choosing a technical co-founder, based on building an AI-powered Shopify app from idea to App Store in sixty days.",
+  },
+  {
     slug: "api-first-development-workflow",
     title: "The API-First Workflow That Changed How I Build Fullstack Features",
     excerpt:
