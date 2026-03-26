@@ -89,7 +89,7 @@ export default function Home() {
             <FadeIn delay={0.2}>
               <div className="flex flex-wrap gap-8 sm:gap-12 mt-10 pt-6 border-t border-border-light">
                 {[
-                  { number: "15+", label: "Years in engineering & leadership" },
+                  { number: "25+", label: "Years in engineering & leadership" },
                   { number: "10×", label: "Faster delivery with AI tooling" },
                   { number: "100%", label: "Built to drive results" },
                 ].map((stat) => (
