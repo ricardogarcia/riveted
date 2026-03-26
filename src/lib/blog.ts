@@ -10,6 +10,17 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
+    slug: "ai-chatbots-pay-for-themselves-in-90-days",
+    title: "How AI Chatbots Pay for Themselves in 90 Days",
+    excerpt:
+      "It is 9:14 PM and a customer with a real problem just landed on your website. Your office is closed. That lead is gone. Here is the math on why a $250/month chatbot is the highest-ROI investment a small business can make.",
+    date: "2026-03-27",
+    readTimeMinutes: 5,
+    tags: ["Small Business", "AI", "Lead Generation", "Chatbots"],
+    ogDescription:
+      "The math behind AI chatbots for small businesses: how a $250/month investment captures after-hours leads and delivers an 11x return in 90 days.",
+  },
+  {
     slug: "what-to-look-for-in-a-technical-co-founder",
     title: "What to Look for in a Technical Co-Founder",
     excerpt:

@@ -4,8 +4,10 @@ import { notFound } from "next/navigation";
 import { getAllPosts, getPostBySlug } from "@/lib/blog";
 import BlogContent_ApiFirstWorkflow from "@/components/BlogContent_ApiFirstWorkflow";
 import BlogContent_TechnicalCoFounder from "@/components/BlogContent_TechnicalCoFounder";
+import BlogContent_AiChatbots90Days from "@/components/BlogContent_AiChatbots90Days";
 
 const contentMap: Record<string, React.ComponentType> = {
+  "ai-chatbots-pay-for-themselves-in-90-days": BlogContent_AiChatbots90Days,
   "what-to-look-for-in-a-technical-co-founder": BlogContent_TechnicalCoFounder,
   "api-first-development-workflow": BlogContent_ApiFirstWorkflow,
 };
