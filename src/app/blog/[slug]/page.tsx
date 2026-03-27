@@ -5,8 +5,10 @@ import { getAllPosts, getPostBySlug } from "@/lib/blog";
 import BlogContent_ApiFirstWorkflow from "@/components/BlogContent_ApiFirstWorkflow";
 import BlogContent_TechnicalCoFounder from "@/components/BlogContent_TechnicalCoFounder";
 import BlogContent_AiChatbots90Days from "@/components/BlogContent_AiChatbots90Days";
+import BlogContent_McpGroundsLlms from "@/components/BlogContent_McpGroundsLlms";
 
 const contentMap: Record<string, React.ComponentType> = {
+  "mcp-grounds-llms-in-real-data": BlogContent_McpGroundsLlms,
   "ai-chatbots-pay-for-themselves-in-90-days": BlogContent_AiChatbots90Days,
   "what-to-look-for-in-a-technical-co-founder": BlogContent_TechnicalCoFounder,
   "api-first-development-workflow": BlogContent_ApiFirstWorkflow,
