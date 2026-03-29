@@ -10,6 +10,18 @@ export interface BlogPost {
 
 export const posts: BlogPost[] = [
   {
+    slug: "agentic-ai-weather-shipping-decisions",
+    title:
+      "How We Used Agentic AI to Put Weather-Based Shipping Decisions on Autopilot",
+    excerpt:
+      "A look at the Automatic Weather Recheck feature and what it teaches us about the real promise of agentic AI in logistics.",
+    date: "2026-03-29",
+    readTimeMinutes: 7,
+    tags: ["AI", "Logistics", "Agentic AI", "WeatherFreight"],
+    ogDescription:
+      "How WeatherFreight's Automatic Weather Recheck uses agentic AI to autonomously monitor and resolve shipping holds for temperature-sensitive products.",
+  },
+  {
     slug: "mcp-grounds-llms-in-real-data",
     title:
       "Stop Letting Your AI Make Things Up: How MCP Grounds LLMs in Real Data",

@@ -6,8 +6,10 @@ import BlogContent_ApiFirstWorkflow from "@/components/BlogContent_ApiFirstWorkf
 import BlogContent_TechnicalCoFounder from "@/components/BlogContent_TechnicalCoFounder";
 import BlogContent_AiChatbots90Days from "@/components/BlogContent_AiChatbots90Days";
 import BlogContent_McpGroundsLlms from "@/components/BlogContent_McpGroundsLlms";
+import BlogContent_AgenticAiWeatherShipping from "@/components/BlogContent_AgenticAiWeatherShipping";
 
 const contentMap: Record<string, React.ComponentType> = {
+  "agentic-ai-weather-shipping-decisions": BlogContent_AgenticAiWeatherShipping,
   "mcp-grounds-llms-in-real-data": BlogContent_McpGroundsLlms,
   "ai-chatbots-pay-for-themselves-in-90-days": BlogContent_AiChatbots90Days,
   "what-to-look-for-in-a-technical-co-founder": BlogContent_TechnicalCoFounder,
