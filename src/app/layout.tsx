@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     "AI websites",
     "web app consulting",
     "small business websites",
-    "AI chatbot",
+    "AI assistant",
     "Intercom",
     "web development",
     "Shopify apps",

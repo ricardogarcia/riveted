@@ -34,15 +34,15 @@ export const posts: BlogPost[] = [
       "How the Model Context Protocol eliminates LLM hallucinations by grounding AI in real, auditable data sources — and why it's increasingly a compliance requirement.",
   },
   {
-    slug: "ai-chatbots-pay-for-themselves-in-90-days",
-    title: "How AI Chatbots Pay for Themselves in 90 Days",
+    slug: "ai-assistants-pay-for-themselves-in-90-days",
+    title: "How AI Assistants Pay for Themselves in 90 Days",
     excerpt:
-      "It is 9:14 PM and a customer with a real problem just landed on your website. Your office is closed. That lead is gone. Here is the math on why a $250/month chatbot is the highest-ROI investment a small business can make.",
+      "It is 9:14 PM and a customer with a real problem just landed on your website. Your office is closed. That lead is gone. Here is the math on why a $250/month AI assistant is the highest-ROI investment a small business can make.",
     date: "2026-03-26",
     readTimeMinutes: 5,
-    tags: ["Small Business", "AI", "Lead Generation", "Chatbots"],
+    tags: ["Small Business", "AI", "Lead Generation", "AI Assistants"],
     ogDescription:
-      "The math behind AI chatbots for small businesses: how a $250/month investment captures after-hours leads and delivers an 11x return in 90 days.",
+      "The math behind AI assistants for small businesses: how a $250/month investment captures after-hours leads and delivers an 11x return in 90 days.",
   },
   {
     slug: "what-to-look-for-in-a-technical-co-founder",

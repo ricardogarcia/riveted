@@ -147,12 +147,12 @@ export default function Home() {
                   We build websites for small businesses that don&apos;t just
                   look good — they generate leads, convert customers, and grow
                   revenue. AI tools let us deliver fast, and smart integrations
-                  like chatbots keep your site working while you sleep.
+                  like AI assistants keep your site working while you sleep.
                 </p>
                 <ul className="space-y-0 mb-6">
                   {[
                     "SEO-optimized, conversion-focused design",
-                    "AI chatbots (Intercom) for 24/7 lead capture",
+                    "AI assistants (Intercom) for 24/7 lead capture",
                     "Smart forms & automated follow-ups",
                     "Fast delivery powered by AI tooling",
                     "Ongoing support & growth strategy",
@@ -560,107 +560,207 @@ export default function Home() {
           <FadeIn>
             <div className="text-[0.75rem] font-semibold tracking-[0.25em] uppercase text-rivet mb-4 flex items-center gap-3">
               <span className="w-8 h-px bg-rivet" />
-              AI Web App Consulting · Case Study
+              Case Studies
             </div>
             <h2 className="font-serif text-[clamp(2rem,3.5vw,3.2rem)] text-foreground mb-10 max-w-[650px] font-normal">
-              WeatherFreight — built by Riveted.
+              Built by Riveted.
             </h2>
           </FadeIn>
 
-          <FadeIn delay={0.15}>
-            <div className="bg-white rounded-lg overflow-hidden shadow-[0_4px_24px_rgba(0,0,0,0.06)] border border-border-light grid grid-cols-1 lg:grid-cols-2 transition-all hover:shadow-[0_8px_40px_rgba(0,0,0,0.1)] hover:border-border-color">
-              {/* Screenshot */}
-              <div className="min-h-[320px] lg:min-h-[360px] bg-gradient-to-br from-[#1a2332] to-[#0f1923] flex items-center justify-center relative overflow-hidden">
-                <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_50%_at_30%_30%,rgba(59,130,246,0.08),transparent)]" />
-                <div className="absolute inset-0 bg-[radial-gradient(ellipse_40%_60%_at_80%_70%,rgba(184,148,46,0.06),transparent)]" />
-                <div className="relative z-10 p-8 text-center w-full">
-                  <div className="font-display text-3xl tracking-[0.1em] text-white mb-2">
-                    Weather<span className="text-[#60a5fa]">Freight</span>
+          <div className="space-y-10">
+            {/* WeatherFreight */}
+            <FadeIn delay={0.15}>
+              <div className="bg-white rounded-lg overflow-hidden shadow-[0_4px_24px_rgba(0,0,0,0.06)] border border-border-light grid grid-cols-1 lg:grid-cols-2 transition-all hover:shadow-[0_8px_40px_rgba(0,0,0,0.1)] hover:border-border-color">
+                {/* Screenshot */}
+                <div className="min-h-[320px] lg:min-h-[360px] bg-gradient-to-br from-[#1a2332] to-[#0f1923] flex items-center justify-center relative overflow-hidden">
+                  <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_50%_at_30%_30%,rgba(59,130,246,0.08),transparent)]" />
+                  <div className="absolute inset-0 bg-[radial-gradient(ellipse_40%_60%_at_80%_70%,rgba(184,148,46,0.06),transparent)]" />
+                  <div className="relative z-10 p-8 text-center w-full">
+                    <div className="font-display text-3xl tracking-[0.1em] text-white mb-2">
+                      Weather<span className="text-[#60a5fa]">Freight</span>
+                    </div>
+                    <p className="text-[0.75rem] text-white/60 mb-6">
+                      AI-powered weather intelligence for shipping perishables &
+                      beverages
+                    </p>
+                    <div className="flex justify-center gap-3 flex-wrap">
+                      {[
+                        {
+                          title: "Route Analysis",
+                          desc: "Weather along entire route",
+                        },
+                        {
+                          title: "Optimal Window",
+                          desc: "Safe arrival timing",
+                        },
+                        {
+                          title: "Shopify Integration",
+                          desc: "Auto order notes",
+                        },
+                      ].map((feat) => (
+                        <div
+                          key={feat.title}
+                          className="bg-white/[0.06] border border-white/10 rounded-md px-4 py-2 text-center"
+                        >
+                          <strong className="block text-[0.7rem] text-[#60a5fa] mb-0.5">
+                            {feat.title}
+                          </strong>
+                          <span className="text-[0.65rem] text-white/70">
+                            {feat.desc}
+                          </span>
+                        </div>
+                      ))}
+                    </div>
                   </div>
-                  <p className="text-[0.75rem] text-white/60 mb-6">
-                    AI-powered weather intelligence for shipping perishables &
-                    beverages
+                </div>
+
+                {/* Info */}
+                <div className="p-8 sm:p-10 flex flex-col justify-center">
+                  <div className="text-[0.7rem] font-semibold tracking-[0.15em] uppercase text-rivet mb-3">
+                    Shopify App · SaaS Product
+                  </div>
+                  <h3 className="font-serif text-[1.8rem] text-foreground mb-2 font-normal">
+                    WeatherFreight
+                  </h3>
+                  <p className="text-[0.95rem] leading-[1.7] text-foreground-light mb-4">
+                    A full AI-powered Shopify app built from concept to
+                    production. WeatherFreight monitors weather conditions along
+                    shipping routes to protect temperature-sensitive products —
+                    recommending optimal fulfillment windows and automatically
+                    attaching shipping notes to every order.
                   </p>
-                  <div className="flex justify-center gap-3 flex-wrap">
+                  <p className="text-[0.95rem] leading-[1.7] text-foreground-light mb-5">
+                    This is the kind of product we help founders and businesses
+                    bring to life: real AI solving a real problem, shipped to
+                    production and listed on the Shopify App Store.
+                  </p>
+                  <div className="flex flex-wrap gap-1.5 mb-6">
                     {[
-                      {
-                        title: "Route Analysis",
-                        desc: "Weather along entire route",
-                      },
-                      {
-                        title: "Optimal Window",
-                        desc: "Safe arrival timing",
-                      },
-                      {
-                        title: "Shopify Integration",
-                        desc: "Auto order notes",
-                      },
-                    ].map((feat) => (
-                      <div
-                        key={feat.title}
-                        className="bg-white/[0.06] border border-white/10 rounded-md px-4 py-2 text-center"
+                      "AI / ML",
+                      "Shopify App",
+                      "Weather API",
+                      "Route Optimization",
+                      "TypeScript / Next.js",
+                      "Node.js",
+                      "SaaS",
+                    ].map((tag) => (
+                      <span
+                        key={tag}
+                        className="text-[0.65rem] font-medium px-2.5 py-1 bg-background-alt text-foreground-light rounded-sm"
                       >
-                        <strong className="block text-[0.7rem] text-[#60a5fa] mb-0.5">
-                          {feat.title}
-                        </strong>
-                        <span className="text-[0.65rem] text-white/70">
-                          {feat.desc}
-                        </span>
-                      </div>
+                        {tag}
+                      </span>
                     ))}
                   </div>
+                  <a
+                    href="https://weatherfreight.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1.5 text-sm font-semibold text-rivet tracking-[0.05em] transition-[gap] hover:gap-3"
+                  >
+                    Visit weatherfreight.com →
+                  </a>
                 </div>
               </div>
+            </FadeIn>
 
-              {/* Info */}
-              <div className="p-8 sm:p-10 flex flex-col justify-center">
-                <div className="text-[0.7rem] font-semibold tracking-[0.15em] uppercase text-rivet mb-3">
-                  Shopify App · SaaS Product
+            {/* LeadDig */}
+            <FadeIn delay={0.3}>
+              <div className="bg-white rounded-lg overflow-hidden shadow-[0_4px_24px_rgba(0,0,0,0.06)] border border-border-light grid grid-cols-1 lg:grid-cols-2 transition-all hover:shadow-[0_8px_40px_rgba(0,0,0,0.1)] hover:border-border-color">
+                {/* Screenshot */}
+                <div className="min-h-[320px] lg:min-h-[360px] bg-gradient-to-br from-[#1c1a0e] to-[#0f0e08] flex items-center justify-center relative overflow-hidden">
+                  <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_50%_at_30%_30%,rgba(217,180,60,0.08),transparent)]" />
+                  <div className="absolute inset-0 bg-[radial-gradient(ellipse_40%_60%_at_80%_70%,rgba(245,158,11,0.06),transparent)]" />
+                  <div className="relative z-10 p-8 text-center w-full">
+                    <div className="font-display text-3xl tracking-[0.1em] text-white mb-2">
+                      Lead<span className="text-amber-400">Dig</span>
+                    </div>
+                    <p className="text-[0.75rem] text-white/60 mb-6">
+                      AI-powered permit intelligence for construction contractors
+                    </p>
+                    <div className="flex justify-center gap-3 flex-wrap">
+                      {[
+                        {
+                          title: "Permit Scraping",
+                          desc: "Daily municipal data",
+                        },
+                        {
+                          title: "AI Classification",
+                          desc: "Type, value & contractor",
+                        },
+                        {
+                          title: "Territory Alerts",
+                          desc: "Real-time notifications",
+                        },
+                      ].map((feat) => (
+                        <div
+                          key={feat.title}
+                          className="bg-white/[0.06] border border-white/10 rounded-md px-4 py-2 text-center"
+                        >
+                          <strong className="block text-[0.7rem] text-amber-400 mb-0.5">
+                            {feat.title}
+                          </strong>
+                          <span className="text-[0.65rem] text-white/70">
+                            {feat.desc}
+                          </span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
                 </div>
-                <h3 className="font-serif text-[1.8rem] text-foreground mb-2 font-normal">
-                  WeatherFreight
-                </h3>
-                <p className="text-[0.95rem] leading-[1.7] text-foreground-light mb-4">
-                  A full AI-powered Shopify app built from concept to
-                  production. WeatherFreight monitors weather conditions along
-                  shipping routes to protect temperature-sensitive products —
-                  recommending optimal fulfillment windows and automatically
-                  attaching shipping notes to every order.
-                </p>
-                <p className="text-[0.95rem] leading-[1.7] text-foreground-light mb-5">
-                  This is the kind of product we help founders and businesses
-                  bring to life: real AI solving a real problem, shipped to
-                  production and listed on the Shopify App Store.
-                </p>
-                <div className="flex flex-wrap gap-1.5 mb-6">
-                  {[
-                    "AI / ML",
-                    "Shopify App",
-                    "Weather API",
-                    "Route Optimization",
-                    "TypeScript / Next.js",
-                    "Node.js",
-                    "SaaS",
-                  ].map((tag) => (
-                    <span
-                      key={tag}
-                      className="text-[0.65rem] font-medium px-2.5 py-1 bg-background-alt text-foreground-light rounded-sm"
-                    >
-                      {tag}
-                    </span>
-                  ))}
+
+                {/* Info */}
+                <div className="p-8 sm:p-10 flex flex-col justify-center">
+                  <div className="text-[0.7rem] font-semibold tracking-[0.15em] uppercase text-rivet mb-3">
+                    B2B SaaS · Construction Tech
+                  </div>
+                  <h3 className="font-serif text-[1.8rem] text-foreground mb-2 font-normal">
+                    LeadDig
+                  </h3>
+                  <p className="text-[0.95rem] leading-[1.7] text-foreground-light mb-4">
+                    A B2B SaaS platform that gives construction contractors
+                    real-time visibility into building permits filed in their
+                    local markets. LeadDig scrapes municipal permit databases
+                    daily, uses AI to classify each permit by type, value, and
+                    contractor — then surfaces the opportunities that matter
+                    most.
+                  </p>
+                  <p className="text-[0.95rem] leading-[1.7] text-foreground-light mb-5">
+                    Contractors using LeadDig see 100% of permit activity in
+                    their territory — not just the 10% they hear about through
+                    referrals. Set your map, save your searches, and get alerts
+                    before competitors even know a project exists.
+                  </p>
+                  <div className="flex flex-wrap gap-1.5 mb-6">
+                    {[
+                      "AI / ML",
+                      "Data Scraping",
+                      "Map Intelligence",
+                      "Real-Time Alerts",
+                      "TypeScript / Next.js",
+                      "Node.js",
+                      "SaaS",
+                    ].map((tag) => (
+                      <span
+                        key={tag}
+                        className="text-[0.65rem] font-medium px-2.5 py-1 bg-background-alt text-foreground-light rounded-sm"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                  <a
+                    href="https://leaddig.io"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1.5 text-sm font-semibold text-rivet tracking-[0.05em] transition-[gap] hover:gap-3"
+                  >
+                    Visit leaddig.io →
+                  </a>
                 </div>
-                <a
-                  href="https://weatherfreight.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 text-sm font-semibold text-rivet tracking-[0.05em] transition-[gap] hover:gap-3"
-                >
-                  Visit weatherfreight.com →
-                </a>
               </div>
-            </div>
-          </FadeIn>
+            </FadeIn>
+          </div>
         </div>
       </section>
 

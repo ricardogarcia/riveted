@@ -11,7 +11,7 @@ import BlogContent_AgenticAiWeatherShipping from "@/components/BlogContent_Agent
 const contentMap: Record<string, React.ComponentType> = {
   "agentic-ai-weather-shipping-decisions": BlogContent_AgenticAiWeatherShipping,
   "mcp-grounds-llms-in-real-data": BlogContent_McpGroundsLlms,
-  "ai-chatbots-pay-for-themselves-in-90-days": BlogContent_AiChatbots90Days,
+  "ai-assistants-pay-for-themselves-in-90-days": BlogContent_AiChatbots90Days,
   "what-to-look-for-in-a-technical-co-founder": BlogContent_TechnicalCoFounder,
   "api-first-development-workflow": BlogContent_ApiFirstWorkflow,
 };

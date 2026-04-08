@@ -68,10 +68,10 @@ export default function BlogContent_AiChatbots90Days() {
 
       <FadeIn delay={0.1}>
         <h2 className="font-[family-name:var(--font-instrument-serif)] text-[1.6rem] text-foreground mt-10 mb-4 font-normal">
-          What an AI Chatbot Actually Costs
+          What an AI Assistant Actually Costs
         </h2>
         <p className="text-[1.05rem] leading-[1.9] text-foreground-light">
-          An AI-powered chatbot through a platform like Intercom runs about
+          An AI-powered assistant through a platform like Intercom runs about
           $29 per month for a seat, plus $0.99 every time the AI successfully
           resolves a conversation. That means it answers the visitor&apos;s
           questions, qualifies them, and captures their information or books
@@ -98,12 +98,12 @@ export default function BlogContent_AiChatbots90Days() {
 
       <FadeIn delay={0.1}>
         <h2 className="font-[family-name:var(--font-instrument-serif)] text-[1.6rem] text-foreground mt-10 mb-4 font-normal">
-          What the Chatbot Actually Does
+          What the AI Assistant Actually Does
         </h2>
         <p className="text-[1.05rem] leading-[1.9] text-foreground-light">
           This is not the clunky chatbot from 2018 that makes people click
           through a decision tree and then says &ldquo;please leave a
-          message.&rdquo; Modern AI chatbots, trained on your specific
+          message.&rdquo; Modern AI assistants, trained on your specific
           business, can hold real conversations.
         </p>
       </FadeIn>
@@ -111,7 +111,7 @@ export default function BlogContent_AiChatbots90Days() {
       <FadeIn delay={0.1}>
         <p className="text-[1.05rem] leading-[1.9] text-foreground-light">
           Here is what that looks like for a plumbing company. A visitor lands
-          on your site at 9 PM with a leaking sink. The chatbot greets them,
+          on your site at 9 PM with a leaking sink. The assistant greets them,
           asks about the problem, confirms you service their area, and books a
           morning appointment. It collects their name, address, and phone
           number. By the time you check your phone the next morning, you have
@@ -123,7 +123,7 @@ export default function BlogContent_AiChatbots90Days() {
 
       <FadeIn delay={0.1}>
         <p className="text-[1.05rem] leading-[1.9] text-foreground-light">
-          During business hours, the same chatbot handles the repetitive
+          During business hours, the same assistant handles the repetitive
           questions your team answers ten times a day. What areas do you
           service? Do you do free estimates? What are your rates? Every minute
           your team does not spend answering those questions is a minute they
@@ -133,7 +133,7 @@ export default function BlogContent_AiChatbots90Days() {
 
       <FadeIn delay={0.1}>
         <p className="text-[1.05rem] leading-[1.9] text-foreground-light">
-          And the chatbot qualifies leads before a human ever touches them. It
+          And the assistant qualifies leads before a human ever touches them. It
           asks the right questions, filters out the tire-kickers, and routes
           serious inquiries to your team with context already attached. Your
           team picks up a warm lead instead of starting from scratch.
@@ -145,7 +145,7 @@ export default function BlogContent_AiChatbots90Days() {
           The 90-Day Math
         </h2>
         <p className="text-[1.05rem] leading-[1.9] text-foreground-light">
-          Let&apos;s keep this conservative. Say the chatbot catches just two
+          Let&apos;s keep this conservative. Say the assistant catches just two
           after-hours leads per week that would have otherwise bounced. Not
           ten. Not twenty. Two.
         </p>
@@ -180,7 +180,7 @@ export default function BlogContent_AiChatbots90Days() {
 
       <FadeIn delay={0.1}>
         <p className="text-[1.05rem] leading-[1.9] text-foreground-light">
-          The chatbot is not replacing your team. It is giving them leverage.
+          The assistant is not replacing your team. It is giving them leverage.
         </p>
       </FadeIn>
 
@@ -189,7 +189,7 @@ export default function BlogContent_AiChatbots90Days() {
           Why Most Businesses Have Not Done This Yet
         </h2>
         <p className="text-[1.05rem] leading-[1.9] text-foreground-light">
-          Honestly, it is because the last generation of chatbots was bad.
+          Honestly, it is because the last generation of AI assistants was bad.
           They felt robotic. They frustrated customers. They created more
           problems than they solved. Business owners tried them, got burned,
           and wrote off the whole category.
@@ -198,7 +198,7 @@ export default function BlogContent_AiChatbots90Days() {
 
       <FadeIn delay={0.1}>
         <p className="text-[1.05rem] leading-[1.9] text-foreground-light">
-          That is not where the technology is anymore. AI chatbots in 2026 can
+          That is not where the technology is anymore. AI assistants in 2026 can
           be trained on your specific services, pricing, FAQs, and service
           area. They respond in natural language. They handle edge cases
           gracefully. And when they hit something they cannot handle, they
@@ -209,7 +209,7 @@ export default function BlogContent_AiChatbots90Days() {
 
       <FadeIn delay={0.1}>
         <p className="text-[1.05rem] leading-[1.9] text-foreground-light">
-          The gap between what most business owners think chatbots can do and
+          The gap between what most business owners think AI assistants can do and
           what they actually can do today is enormous. That gap is an
           opportunity.
         </p>
