@@ -7,21 +7,15 @@ export default function TrustedBy() {
         Trusted by the{" "}
         <em className="font-serif italic font-normal">leading brands</em>
       </h2>
-      <div className="relative overflow-hidden">
-        <div className="pointer-events-none absolute left-0 top-0 bottom-0 w-16 bg-gradient-to-r from-white to-transparent z-10" />
-        <div className="pointer-events-none absolute right-0 top-0 bottom-0 w-16 bg-gradient-to-l from-white to-transparent z-10" />
-        <div className="flex w-max animate-marquee gap-16">
-          {[...brands, ...brands, ...brands, ...brands].map((name, i) => (
-            <div
-              key={`${name}-${i}`}
-              className="flex items-center gap-3 shrink-0 opacity-40"
-            >
-              <span className="font-display text-3xl font-bold text-black whitespace-nowrap">
-                {name}
-              </span>
-            </div>
-          ))}
-        </div>
+      <div className="flex flex-wrap justify-center items-center gap-x-16 gap-y-6">
+        {brands.map((name) => (
+          <span
+            key={name}
+            className="font-display text-3xl font-bold text-black whitespace-nowrap opacity-40"
+          >
+            {name}
+          </span>
+        ))}
       </div>
     </section>
   );
