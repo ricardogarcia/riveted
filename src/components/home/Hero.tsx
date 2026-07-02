@@ -23,7 +23,7 @@ export default function Hero() {
       <div className="h-[64px]" aria-hidden="true" />
 
       <div className="w-full max-w-[800px] mx-auto flex flex-col justify-center items-center gap-6 md:gap-8 text-center my-auto z-10 px-4">
-        <h1 className="font-display text-white text-[40px] sm:text-[52px] md:text-[64px] font-normal leading-[1.1] md:leading-[1.02]">
+        <h1 className="font-display text-green-400 text-[40px] sm:text-[52px] md:text-[64px] font-normal leading-[1.1] md:leading-[1.02]">
           <motion.span
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
