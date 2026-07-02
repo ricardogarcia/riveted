@@ -300,13 +300,6 @@ function AdaptableCard() {
             </motion.div>
           ))}
         </div>
-        <div
-          className="pointer-events-none absolute inset-x-0 -bottom-10 h-[140px] -mx-4 z-20"
-          style={{
-            background:
-              "linear-gradient(to top, rgba(158,148,139,1) 0%, rgba(158,148,139,1) 35%, rgba(158,148,139,0.7) 65%, rgba(158,148,139,0) 80%)",
-          }}
-        />
       </div>
     </div>
   );
