@@ -2,7 +2,6 @@ const brands = [
   "Google",
   "YouTube Ads",
   "LeaseLock",
-  "Bend",
   "WeatherFreight",
   "Prima Pave",
   "MIT",
