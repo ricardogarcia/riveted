@@ -1,9 +1,4 @@
-const brands = [
-  "YouTube Ads",
-  "LeaseLock",
-  "WeatherFreight",
-  "Prima Pave",
-];
+const brands = ["LeaseLock", "WeatherFreight", "Prima Pave"];
 
 export default function TrustedBy() {
   return (
