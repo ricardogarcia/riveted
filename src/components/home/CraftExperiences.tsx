@@ -235,6 +235,82 @@ function ChatCard() {
   );
 }
 
+const ADAPT_ITEMS = [
+  { label: "AI-Powered Websites", color: "#887C71" },
+  { label: "Web App Consulting", color: "#9E948B" },
+  { label: "Engineering Coaching", color: "#9E948B" },
+];
+
+function AdaptableCard() {
+  const ref = useRef<HTMLDivElement>(null);
+  const isInView = useInView(ref, { once: true, margin: "0px 0px -40px 0px" });
+
+  return (
+    <div
+      ref={ref}
+      className="relative flex-1 h-[585px] rounded-3xl overflow-hidden flex flex-col px-[33px] pt-[44px] pb-10 bg-[#9E948B]"
+    >
+      <div className="flex flex-col gap-[26px]">
+        <h3 className="font-display text-white text-5xl font-normal leading-[1.05]">
+          It&apos;s completely
+          <br />
+          adaptable.
+        </h3>
+        <p className="text-white/60 text-lg leading-snug max-w-[340px]">
+          <AnimatedWords
+            active={isInView}
+            baseDelay={0.6}
+            step={0.04}
+            duration={0.4}
+            y={8}
+            text="From a lead-generating website to a technical co-founder to hands-on engineering coaching — Riveted meets your business where it is."
+          />
+        </p>
+      </div>
+      <div className="mt-auto z-10 relative">
+        <div className="flex flex-col gap-[12px]">
+          {ADAPT_ITEMS.map((item, idx) => (
+            <motion.div
+              key={item.label}
+              animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+              transition={{
+                delay: 1.1 + idx * 0.18,
+                duration: 0.55,
+                ease: "easeOut",
+              }}
+              className="w-full py-[15px] px-[27px] rounded-2xl bg-white flex items-center justify-between"
+            >
+              <span className="text-lg" style={{ color: item.color }}>
+                {item.label}
+              </span>
+              <svg
+                className="w-[22px] h-[22px] text-neutral-400"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth={2.5}
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M12 4.5v15m7.5-7.5h-15"
+                />
+              </svg>
+            </motion.div>
+          ))}
+        </div>
+        <div
+          className="pointer-events-none absolute inset-x-0 -bottom-10 h-[140px] -mx-4 z-20"
+          style={{
+            background:
+              "linear-gradient(to top, rgba(158,148,139,1) 0%, rgba(158,148,139,1) 35%, rgba(158,148,139,0.7) 65%, rgba(158,148,139,0) 80%)",
+          }}
+        />
+      </div>
+    </div>
+  );
+}
+
 function CardReveal({
   index,
   children,
@@ -271,6 +347,9 @@ export default function CraftExperiences() {
           </CardReveal>
           <CardReveal index={1}>
             <ChatCard />
+          </CardReveal>
+          <CardReveal index={2}>
+            <AdaptableCard />
           </CardReveal>
         </div>
       </div>
