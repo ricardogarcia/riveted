@@ -44,7 +44,7 @@ export default function Navbar() {
           animate={{ width: "auto" }}
           transition={{ duration: 0.8, delay: 1.1, ease: EASE }}
           style={{ willChange: "width" }}
-          className="hidden lg:flex bg-black/40 backdrop-blur-lg rounded-3xl items-center overflow-hidden h-[64px] flex-row-reverse"
+          className={`hidden lg:flex ${isHome ? "bg-black/40" : "bg-black/70"} backdrop-blur-lg rounded-3xl items-center overflow-hidden h-[64px] flex-row-reverse`}
         >
           <div className="p-1.5 shrink-0">
             <a
@@ -77,7 +77,8 @@ export default function Navbar() {
           <button
             onClick={() => setMobileOpen((o) => !o)}
             aria-label="Toggle menu"
-            className="w-12 h-12 rounded-full bg-black/40 backdrop-blur-lg flex items-center justify-center text-white"
+            aria-expanded={mobileOpen}
+            className={`w-12 h-12 rounded-full ${isHome ? "bg-black/40" : "bg-black/70"} backdrop-blur-lg flex items-center justify-center text-white`}
           >
             {mobileOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>

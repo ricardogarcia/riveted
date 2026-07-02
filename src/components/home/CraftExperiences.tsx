@@ -149,9 +149,10 @@ function ChatCard() {
   const isInView = useInView(ref, { once: true, margin: "0px 0px -40px 0px" });
 
   useEffect(() => {
+    if (!isInView) return;
     const t = setTimeout(() => setFilled(true), 1100);
     return () => clearTimeout(t);
-  }, []);
+  }, [isInView]);
 
   return (
     <div
