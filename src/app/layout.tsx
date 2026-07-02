@@ -21,13 +21,13 @@ const playfair = Playfair_Display({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://rivetedinc.com"),
-  title: "Riveted, Inc. — AI-Powered Websites & Web App Consulting",
+  title: "Riveted, Inc. — Fractional CTO & Web App Consulting",
   description:
-    "We build AI-powered websites for small businesses and partner with founders to design, build, and ship production-grade web applications.",
+    "We provide fractional CTO leadership for small businesses and partner with founders to design, build, and ship production-grade web applications.",
   keywords: [
-    "AI websites",
+    "fractional CTO",
     "web app consulting",
-    "small business websites",
+    "small business technology leadership",
     "AI assistant",
     "Intercom",
     "web development",
@@ -39,18 +39,18 @@ export const metadata: Metadata = {
     icon: "/images/favicon.svg",
   },
   openGraph: {
-    title: "Riveted, Inc. — AI-Powered Websites & Web App Consulting",
+    title: "Riveted, Inc. — Fractional CTO & Web App Consulting",
     description:
-      "We build AI-powered websites for small businesses and partner with founders to design, build, and ship production-grade web applications.",
+      "We provide fractional CTO leadership for small businesses and partner with founders to design, build, and ship production-grade web applications.",
     url: "https://rivetedinc.com",
     siteName: "Riveted, Inc.",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Riveted, Inc. — AI-Powered Websites & Web App Consulting",
+    title: "Riveted, Inc. — Fractional CTO & Web App Consulting",
     description:
-      "We build AI-powered websites for small businesses and partner with founders to design, build, and ship production-grade web applications.",
+      "We provide fractional CTO leadership for small businesses and partner with founders to design, build, and ship production-grade web applications.",
   },
 };
 

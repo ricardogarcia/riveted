@@ -67,7 +67,7 @@ export default function Hero() {
         <p className="w-full md:w-[480px] max-w-prose text-white/80 text-xl leading-[1.25] text-left">
           <AnimatedWords
             baseDelay={1.2}
-            text="We build AI-powered websites for small businesses and partner with founders to ship production-grade products — engineering rigor and business sense in everything we do."
+            text="We provide fractional CTO leadership for small businesses and partner with founders to ship production-grade products — engineering rigor and business sense in everything we do."
           />
         </p>
         <motion.div
@@ -77,7 +77,7 @@ export default function Hero() {
           className="flex flex-row flex-wrap lg:flex-col items-center lg:items-end gap-2.5 w-full md:w-auto justify-end"
         >
           <div className="h-[56px] px-5 rounded-2xl border border-white/40 text-white text-xl whitespace-nowrap flex items-center justify-center">
-            Websites that win customers
+            Fractional CTO leadership
           </div>
           <div className="flex items-center gap-2">
             <div className="w-[56px] h-[56px] rounded-2xl border border-white/40 flex items-center justify-center shrink-0">

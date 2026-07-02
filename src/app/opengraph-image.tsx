@@ -3,7 +3,7 @@ import { readFile } from "fs/promises";
 import path from "path";
 
 export const runtime = "nodejs";
-export const alt = "Riveted, Inc. — AI-Powered Websites & Web App Consulting";
+export const alt = "Riveted, Inc. — Fractional CTO & Web App Consulting";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
