@@ -237,7 +237,7 @@ function ChatCard() {
 }
 
 const ADAPT_ITEMS = [
-  { label: "AI-Powered Websites", color: "#887C71" },
+  { label: "Fractional CTO", color: "#887C71" },
   { label: "Web App Consulting", color: "#9E948B" },
   { label: "Engineering Coaching", color: "#9E948B" },
 ];
