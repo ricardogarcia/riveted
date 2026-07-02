@@ -186,7 +186,18 @@ export default function Testimonials() {
                     transition={{ duration: 0.3 }}
                     className="font-display text-3xl font-bold text-black"
                   >
-                    {t.tile}
+                    {t.ctaExternal ? (
+                      <a
+                        href={t.ctaHref}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="hover:underline"
+                      >
+                        {t.tile}
+                      </a>
+                    ) : (
+                      t.tile
+                    )}
                   </motion.span>
                 </AnimatePresence>
               </motion.div>
@@ -228,9 +239,20 @@ export default function Testimonials() {
                   <span className="font-serif italic text-xl text-black">
                     {t.attributionName}
                   </span>
-                  <span className="text-xl text-black/50">
-                    {t.attributionRole}
-                  </span>
+                  {t.ctaExternal ? (
+                    <a
+                      href={t.ctaHref}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-xl text-black/50 hover:text-black hover:underline transition-colors"
+                    >
+                      {t.attributionRole}
+                    </a>
+                  ) : (
+                    <span className="text-xl text-black/50">
+                      {t.attributionRole}
+                    </span>
+                  )}
                 </motion.div>
               </AnimatePresence>
             </motion.div>
