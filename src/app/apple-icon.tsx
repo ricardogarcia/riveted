@@ -1,16 +1,30 @@
 import { ImageResponse } from "next/og";
-import { readFile } from "fs/promises";
-import path from "path";
 
 export const runtime = "nodejs";
 export const size = { width: 180, height: 180 };
 export const contentType = "image/png";
 
+async function loadGoogleFont(
+  family: string,
+  text: string
+): Promise<ArrayBuffer | null> {
+  try {
+    const url = `https://fonts.googleapis.com/css2?family=${family}&text=${encodeURIComponent(text)}`;
+    const css = await (await fetch(url)).text();
+    const resource = css.match(
+      /src: url\((.+?)\) format\('(opentype|truetype)'\)/
+    );
+    if (!resource) return null;
+    const res = await fetch(resource[1]);
+    if (!res.ok) return null;
+    return await res.arrayBuffer();
+  } catch {
+    return null;
+  }
+}
+
 export default async function AppleIcon() {
-  const logoData = await readFile(
-    path.join(process.cwd(), "public/images/riveted-logo.png")
-  );
-  const logoBase64 = `data:image/png;base64,${logoData.toString("base64")}`;
+  const interTight = await loadGoogleFont("Inter+Tight:wght@500", "R");
 
   return new ImageResponse(
     (
@@ -21,14 +35,45 @@ export default async function AppleIcon() {
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          background: "#1a1a1a",
+          background: "#141413",
           borderRadius: 36,
         }}
       >
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src={logoBase64} alt="" width={160} height={160} />
+        <div
+          style={{
+            display: "flex",
+            alignItems: "baseline",
+            fontFamily: interTight ? "Inter Tight" : "sans-serif",
+            fontSize: 110,
+            fontWeight: 500,
+            color: "#ffffff",
+          }}
+        >
+          R
+          <div
+            style={{
+              width: 18,
+              height: 18,
+              borderRadius: 9,
+              background: "#9E948B",
+              marginLeft: 8,
+            }}
+          />
+        </div>
       </div>
     ),
-    { ...size }
+    {
+      ...size,
+      fonts: interTight
+        ? [
+            {
+              name: "Inter Tight",
+              data: interTight,
+              style: "normal" as const,
+              weight: 500 as const,
+            },
+          ]
+        : undefined,
+    }
   );
 }

@@ -1,16 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
-  <!-- Outer rivet ring -->
-  <circle cx="32" cy="32" r="28" fill="#b8942e" />
-  <!-- Beveled edge highlight -->
-  <circle cx="32" cy="32" r="24" fill="#d4ad3a" />
-  <!-- Inner rivet face -->
-  <circle cx="32" cy="32" r="20" fill="#b8942e" />
-  <!-- Center indent -->
-  <circle cx="32" cy="32" r="10" fill="#a07e24" />
-  <!-- Specular highlight -->
-  <ellipse cx="26" cy="24" rx="8" ry="6" fill="rgba(255,255,255,0.3)" />
-  <!-- Small center dot -->
-  <circle cx="32" cy="32" r="4" fill="#8a6c1e" />
-  <!-- Top highlight crescent -->
-  <ellipse cx="28" cy="22" rx="5" ry="3" fill="rgba(255,255,255,0.2)" />
+  <rect width="64" height="64" rx="14" fill="#141413" />
+  <text x="28" y="46" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="40" font-weight="600" fill="#ffffff" text-anchor="middle">R</text>
+  <circle cx="47" cy="43" r="4.5" fill="#9E948B" />
 </svg>
