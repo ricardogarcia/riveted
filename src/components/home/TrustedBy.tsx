@@ -1,11 +1,8 @@
 const brands = [
-  "Google",
   "YouTube Ads",
   "LeaseLock",
   "WeatherFreight",
   "Prima Pave",
-  "MIT",
-  "Caltech",
 ];
 
 export default function TrustedBy() {
@@ -19,7 +16,7 @@ export default function TrustedBy() {
         <div className="pointer-events-none absolute left-0 top-0 bottom-0 w-16 bg-gradient-to-r from-white to-transparent z-10" />
         <div className="pointer-events-none absolute right-0 top-0 bottom-0 w-16 bg-gradient-to-l from-white to-transparent z-10" />
         <div className="flex w-max animate-marquee gap-16">
-          {[...brands, ...brands].map((name, i) => (
+          {[...brands, ...brands, ...brands, ...brands].map((name, i) => (
             <div
               key={`${name}-${i}`}
               className="flex items-center gap-3 shrink-0 opacity-40"
