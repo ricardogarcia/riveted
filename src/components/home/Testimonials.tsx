@@ -43,13 +43,13 @@ const TESTIMONIALS: Testimonial[] = [
   },
   {
     headlinePlain: "Riveted",
-    headlineItalic: "built our platform",
+    headlineItalic: "built our CRM",
     tile: "Roster",
     quote:
-      "A custom tool delivered end to end — Riveted designed and shipped a production-grade platform that streamlined how the Roster team runs their operations.",
+      "Follow up like you mean it — a personal CRM that surfaces who needs you today, keeps a full history of every conversation, and installs like a native app. Taken from idea to launch.",
     attributionName: "Roster,",
-    attributionRole: "roster.co · Custom platform built by Riveted",
-    ctaHref: "https://roster.co",
+    attributionRole: "roster.mobile · Personal CRM built by Riveted",
+    ctaHref: "https://roster.mobile",
     ctaExternal: true,
   },
 ];
