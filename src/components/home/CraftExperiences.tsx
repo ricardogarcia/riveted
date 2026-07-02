@@ -1,7 +1,8 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { motion, useInView } from "framer-motion";
+import { AnimatePresence, motion, useInView } from "framer-motion";
+import AnimatedWords from "./AnimatedWords";
 import { Sparkles } from "lucide-react";
 import { A } from "@/lib/assets";
 
@@ -129,6 +130,111 @@ function StyleCarouselCard() {
   );
 }
 
+function ChatSkeletonRows() {
+  return (
+    <div className="flex items-start">
+      <div className="w-10 h-10 rounded-xl bg-[#FFFFFF54] shrink-0" />
+      <div className="ml-[12px] flex-1 flex flex-col gap-[9px] pr-[22px]">
+        <div className="h-[6px] w-[31px] bg-[#FFFFFF3D] rounded-full mt-[17px]" />
+        <div className="h-[6px] w-[85%] bg-[#FFFFFF3D] rounded-full" />
+        <div className="h-[6px] w-[55%] bg-[#FFFFFF3D] rounded-full" />
+      </div>
+    </div>
+  );
+}
+
+function ChatCard() {
+  const [filled, setFilled] = useState(false);
+  const ref = useRef<HTMLDivElement>(null);
+  const isInView = useInView(ref, { once: true, margin: "0px 0px -40px 0px" });
+
+  useEffect(() => {
+    const t = setTimeout(() => setFilled(true), 1100);
+    return () => clearTimeout(t);
+  }, []);
+
+  return (
+    <div
+      ref={ref}
+      className="relative flex-1 h-[585px] rounded-3xl overflow-hidden bg-[#141413] flex flex-col pt-10 pb-10 justify-between"
+    >
+      <div className="flex-1 flex flex-col justify-center gap-[10px] mb-6">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.2, duration: 0.6 }}
+          className="mx-[58px] h-[108px] rounded-2xl bg-[#FAFAFA14] flex items-start pt-[22px] pl-[22px] relative"
+        >
+          <ChatSkeletonRows />
+        </motion.div>
+
+        <motion.div
+          layout
+          animate={{ backgroundColor: filled ? "#9E948B" : "#FAFAFA14" }}
+          transition={{ duration: 0.7, ease: "easeOut" }}
+          className="mx-[45px] h-[135px] rounded-3xl p-[22px] overflow-hidden relative"
+        >
+          <AnimatePresence mode="wait">
+            {filled ? (
+              <motion.div
+                key="filled"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.5, delay: 0.15 }}
+              >
+                <div className="flex items-center gap-[12px] h-[44px]">
+                  <div className="w-10 h-10 rounded-full bg-[#141413] text-white flex items-center justify-center text-base font-medium shrink-0">
+                    M
+                  </div>
+                  <span className="text-white text-base leading-none">Me</span>
+                </div>
+                <p className="text-white text-[15px] leading-snug mt-[-9px] ml-[56px]">
+                  My website isn&apos;t bringing in leads — can Riveted help?
+                </p>
+              </motion.div>
+            ) : (
+              <motion.div
+                key="skeleton"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.3 }}
+              >
+                <ChatSkeletonRows />
+              </motion.div>
+            )}
+          </AnimatePresence>
+        </motion.div>
+      </div>
+
+      <div className="flex justify-between items-end pl-[32px] pr-[32px]">
+        <div className="w-64 text-white text-4xl leading-10">
+          <AnimatedWords
+            active={isInView}
+            baseDelay={0.5}
+            step={0.1}
+            duration={0.5}
+            y={10}
+            text="Engage and delight customers"
+          />
+        </div>
+        <div className="flex items-center shrink-0">
+          <div className="w-10 h-10 rounded-full border-2 border-[#141413] bg-[#5F5D4D] text-white flex items-center justify-center text-xl z-30">
+            01
+          </div>
+          <div className="w-10 h-10 rounded-full border-2 border-[#141413] bg-[#252522] text-white/40 flex items-center justify-center text-xl -ml-3 z-20">
+            2
+          </div>
+          <div className="w-10 h-10 rounded-full border-2 border-[#141413] bg-[#252522] text-white/40 flex items-center justify-center text-xl -ml-3 z-10">
+            3
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 function CardReveal({
   index,
   children,
@@ -162,6 +268,9 @@ export default function CraftExperiences() {
         <div className="flex flex-col lg:flex-row justify-between items-stretch gap-6">
           <CardReveal index={0}>
             <StyleCarouselCard />
+          </CardReveal>
+          <CardReveal index={1}>
+            <ChatCard />
           </CardReveal>
         </div>
       </div>
