@@ -17,13 +17,13 @@ export default function Hero() {
         playsInline
         className="absolute inset-0 w-full h-full object-cover z-0"
       />
-      <div className="absolute inset-0 bg-black/20 z-0" />
+      <div className="absolute inset-0 bg-black/50 z-0" />
 
       {/* Spacer under the global fixed navbar */}
       <div className="h-[64px]" aria-hidden="true" />
 
       <div className="w-full max-w-[800px] mx-auto flex flex-col justify-center items-center gap-6 md:gap-8 text-center my-auto z-10 px-4">
-        <h1 className="font-display text-green-400 text-[40px] sm:text-[52px] md:text-[64px] font-normal leading-[1.1] md:leading-[1.02]">
+        <h1 className="font-display text-white text-[40px] sm:text-[52px] md:text-[64px] font-normal leading-[1.1] md:leading-[1.02] [text-shadow:0_2px_24px_rgba(0,0,0,0.45)]">
           <motion.span
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
