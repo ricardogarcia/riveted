@@ -1,27 +1,21 @@
 import type { Metadata } from "next";
 import Script from "next/script";
-import { DM_Sans, Bebas_Neue, Instrument_Serif } from "next/font/google";
+import { Inter_Tight, Playfair_Display } from "next/font/google";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import "./globals.css";
 
-const dmSans = DM_Sans({
-  variable: "--font-dm-sans",
+const interTight = Inter_Tight({
+  variable: "--font-inter-tight",
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600"],
+  weight: ["400", "500"],
 });
 
-const bebasNeue = Bebas_Neue({
-  variable: "--font-bebas-neue",
+const playfair = Playfair_Display({
+  variable: "--font-playfair",
   subsets: ["latin"],
-  weight: "400",
-});
-
-const instrumentSerif = Instrument_Serif({
-  variable: "--font-instrument-serif",
-  subsets: ["latin"],
-  weight: "400",
-  style: ["normal", "italic"],
+  weight: ["400"],
+  style: ["italic"],
 });
 
 export const metadata: Metadata = {
@@ -67,7 +61,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${dmSans.variable} ${bebasNeue.variable} ${instrumentSerif.variable} antialiased`}
+      className={`${interTight.variable} ${playfair.variable} antialiased`}
     >
       <head>
         <Script
