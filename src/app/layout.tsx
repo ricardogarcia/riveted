@@ -3,6 +3,7 @@ import Script from "next/script";
 import { Inter_Tight, Playfair_Display } from "next/font/google";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import MotionProvider from "@/components/MotionProvider";
 import "./globals.css";
 
 const interTight = Inter_Tight({
@@ -83,9 +84,11 @@ export default function RootLayout({
         />
       </head>
       <body className="min-h-screen flex flex-col bg-background text-foreground">
-        <Navbar />
-        <main className="flex-1">{children}</main>
-        <Footer />
+        <MotionProvider>
+          <Navbar />
+          <main className="flex-1">{children}</main>
+          <Footer />
+        </MotionProvider>
 
         <Script
           id="intercom"
