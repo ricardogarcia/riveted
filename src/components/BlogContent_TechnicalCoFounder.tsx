@@ -45,7 +45,7 @@ export default function BlogContent_TechnicalCoFounder() {
       </FadeIn>
 
       <FadeIn delay={0.1}>
-        <h2 className="font-[family-name:var(--font-instrument-serif)] text-[1.6rem] text-foreground mt-10 mb-4 font-normal">
+        <h2 className="font-display text-[1.6rem] text-foreground mt-10 mb-4 font-normal">
           The Biggest Mistake Founders Make
         </h2>
         <p className="text-[1.05rem] leading-[1.9] text-foreground-light">
@@ -77,7 +77,7 @@ export default function BlogContent_TechnicalCoFounder() {
       </FadeIn>
 
       <FadeIn delay={0.1}>
-        <h2 className="font-[family-name:var(--font-instrument-serif)] text-[1.6rem] text-foreground mt-10 mb-4 font-normal">
+        <h2 className="font-display text-[1.6rem] text-foreground mt-10 mb-4 font-normal">
           What Actually Worked: The WeatherFreight Story
         </h2>
         <p className="text-[1.05rem] leading-[1.9] text-foreground-light">
@@ -145,7 +145,7 @@ export default function BlogContent_TechnicalCoFounder() {
       </FadeIn>
 
       <FadeIn delay={0.1}>
-        <h2 className="font-[family-name:var(--font-instrument-serif)] text-[1.6rem] text-foreground mt-10 mb-4 font-normal">
+        <h2 className="font-display text-[1.6rem] text-foreground mt-10 mb-4 font-normal">
           The Three Questions to Ask Your Potential Technical Co-Founder
         </h2>
         <p className="text-[1.05rem] leading-[1.9] text-foreground-light">
@@ -208,7 +208,7 @@ export default function BlogContent_TechnicalCoFounder() {
       </FadeIn>
 
       <FadeIn delay={0.1}>
-        <h2 className="font-[family-name:var(--font-instrument-serif)] text-[1.6rem] text-foreground mt-10 mb-4 font-normal">
+        <h2 className="font-display text-[1.6rem] text-foreground mt-10 mb-4 font-normal">
           The Bottom Line
         </h2>
         <p className="text-[1.05rem] leading-[1.9] text-foreground-light">

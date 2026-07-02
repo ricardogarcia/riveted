@@ -42,7 +42,7 @@ export default function BlogContent_AgenticAiWeatherShipping() {
       </FadeIn>
 
       <FadeIn delay={0.1}>
-        <h2 className="font-[family-name:var(--font-instrument-serif)] text-[1.6rem] text-foreground mt-10 mb-4 font-normal">
+        <h2 className="font-display text-[1.6rem] text-foreground mt-10 mb-4 font-normal">
           The problem with a one-time check
         </h2>
         <p className="text-[1.05rem] leading-[1.9] text-foreground-light">
@@ -97,7 +97,7 @@ export default function BlogContent_AgenticAiWeatherShipping() {
       </FadeIn>
 
       <FadeIn delay={0.1}>
-        <h2 className="font-[family-name:var(--font-instrument-serif)] text-[1.6rem] text-foreground mt-10 mb-4 font-normal">
+        <h2 className="font-display text-[1.6rem] text-foreground mt-10 mb-4 font-normal">
           Enter the Automatic Weather Recheck
         </h2>
         <p className="text-[1.05rem] leading-[1.9] text-foreground-light">
@@ -140,7 +140,7 @@ export default function BlogContent_AgenticAiWeatherShipping() {
       </FadeIn>
 
       <FadeIn delay={0.1}>
-        <h2 className="font-[family-name:var(--font-instrument-serif)] text-[1.6rem] text-foreground mt-10 mb-4 font-normal">
+        <h2 className="font-display text-[1.6rem] text-foreground mt-10 mb-4 font-normal">
           This is what agentic AI actually looks like
         </h2>
         <p className="text-[1.05rem] leading-[1.9] text-foreground-light">
@@ -220,7 +220,7 @@ export default function BlogContent_AgenticAiWeatherShipping() {
       </FadeIn>
 
       <FadeIn delay={0.1}>
-        <h2 className="font-[family-name:var(--font-instrument-serif)] text-[1.6rem] text-foreground mt-10 mb-4 font-normal">
+        <h2 className="font-display text-[1.6rem] text-foreground mt-10 mb-4 font-normal">
           What this means for logistics
         </h2>
         <p className="text-[1.05rem] leading-[1.9] text-foreground-light">
@@ -263,7 +263,7 @@ export default function BlogContent_AgenticAiWeatherShipping() {
       </FadeIn>
 
       <FadeIn delay={0.1}>
-        <h2 className="font-[family-name:var(--font-instrument-serif)] text-[1.6rem] text-foreground mt-10 mb-4 font-normal">
+        <h2 className="font-display text-[1.6rem] text-foreground mt-10 mb-4 font-normal">
           The boring magic
         </h2>
         <p className="text-[1.05rem] leading-[1.9] text-foreground-light">

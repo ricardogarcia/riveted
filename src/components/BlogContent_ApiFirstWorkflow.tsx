@@ -30,7 +30,7 @@ export default function BlogContent_ApiFirstWorkflow() {
       </FadeIn>
 
       <FadeIn delay={0.1}>
-        <h2 className="font-[family-name:var(--font-instrument-serif)] text-[1.6rem] text-foreground mt-10 mb-4 font-normal">
+        <h2 className="font-display text-[1.6rem] text-foreground mt-10 mb-4 font-normal">
           Why Backend First?
         </h2>
         <p className="text-[1.05rem] leading-[1.9] text-foreground-light">
@@ -50,13 +50,13 @@ export default function BlogContent_ApiFirstWorkflow() {
           route handler file becomes the single source of truth. The frontend
           developer (even if that is also you) can open the router file, read
           the endpoint definitions, and know exactly what to send and what to
-          expect back. No Slack messages asking "hey, what does the response
-          look like for this endpoint?" The answer is right there in the code.
+          expect back. No Slack messages asking &ldquo;hey, what does the response
+          look like for this endpoint?&rdquo; The answer is right there in the code.
         </p>
       </FadeIn>
 
       <FadeIn delay={0.1}>
-        <h2 className="font-[family-name:var(--font-instrument-serif)] text-[1.6rem] text-foreground mt-10 mb-4 font-normal">
+        <h2 className="font-display text-[1.6rem] text-foreground mt-10 mb-4 font-normal">
           Router Files as Living Documentation
         </h2>
         <p className="text-[1.05rem] leading-[1.9] text-foreground-light">
@@ -108,7 +108,7 @@ async def set_permissions(
       </FadeIn>
 
       <FadeIn delay={0.1}>
-        <h2 className="font-[family-name:var(--font-instrument-serif)] text-[1.6rem] text-foreground mt-10 mb-4 font-normal">
+        <h2 className="font-display text-[1.6rem] text-foreground mt-10 mb-4 font-normal">
           A Real Workflow Example
         </h2>
         <p className="text-[1.05rem] leading-[1.9] text-foreground-light">
@@ -141,7 +141,7 @@ async def set_permissions(
           every endpoint, every request shape, every response. Build your API
           client layer to match. Then build the UI on top of that. If you are
           using AI coding tools, you can point them at the router file and
-          say "build a UI that consumes these endpoints." The router file
+          say &ldquo;build a UI that consumes these endpoints.&rdquo; The router file
           gives the tool (and you) all the context it needs.
         </p>
       </FadeIn>
@@ -161,7 +161,7 @@ async def set_permissions(
       </FadeIn>
 
       <FadeIn delay={0.1}>
-        <h2 className="font-[family-name:var(--font-instrument-serif)] text-[1.6rem] text-foreground mt-10 mb-4 font-normal">
+        <h2 className="font-display text-[1.6rem] text-foreground mt-10 mb-4 font-normal">
           The Peer Repository Trick
         </h2>
         <p className="text-[1.05rem] leading-[1.9] text-foreground-light">
@@ -205,7 +205,7 @@ async def set_permissions(
       </FadeIn>
 
       <FadeIn delay={0.1}>
-        <h2 className="font-[family-name:var(--font-instrument-serif)] text-[1.6rem] text-foreground mt-10 mb-4 font-normal">
+        <h2 className="font-display text-[1.6rem] text-foreground mt-10 mb-4 font-normal">
           What This Actually Eliminates
         </h2>
         <p className="text-[1.05rem] leading-[1.9] text-foreground-light">
@@ -230,7 +230,7 @@ async def set_permissions(
             actual implementation.
           </li>
           <li className="text-[1.05rem] leading-[1.9] text-foreground-light pl-6 relative before:content-[''] before:absolute before:left-0 before:top-[14px] before:w-2 before:h-2 before:rounded-full before:bg-rivet/40">
-            The "who changed the API without telling anyone" problem. Changes
+            The &ldquo;who changed the API without telling anyone&rdquo; problem. Changes
             are visible in the code, and code review catches them.
           </li>
         </ul>
@@ -247,7 +247,7 @@ async def set_permissions(
       </FadeIn>
 
       <FadeIn delay={0.1}>
-        <h2 className="font-[family-name:var(--font-instrument-serif)] text-[1.6rem] text-foreground mt-10 mb-4 font-normal">
+        <h2 className="font-display text-[1.6rem] text-foreground mt-10 mb-4 font-normal">
           Making It Work with AI Tools
         </h2>
         <p className="text-[1.05rem] leading-[1.9] text-foreground-light">
@@ -276,7 +276,7 @@ async def set_permissions(
         <p className="text-[1.05rem] leading-[1.9] text-foreground-light">
           I have found that combining this peer-repo setup with an AI
           assistant that can see both codebases lets me skip the entire
-          "write an API client" phase. I tell the assistant where the router
+          &ldquo;write an API client&rdquo; phase. I tell the assistant where the router
           file lives, describe what the UI should do, and it generates
           frontend code that calls the right endpoints with the right data
           shapes. First try. No iteration needed.
@@ -284,7 +284,7 @@ async def set_permissions(
       </FadeIn>
 
       <FadeIn delay={0.1}>
-        <h2 className="font-[family-name:var(--font-instrument-serif)] text-[1.6rem] text-foreground mt-10 mb-4 font-normal">
+        <h2 className="font-display text-[1.6rem] text-foreground mt-10 mb-4 font-normal">
           The Bottom Line
         </h2>
         <p className="text-[1.05rem] leading-[1.9] text-foreground-light">

@@ -1,151 +1,117 @@
 "use client";
 
-import { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { useState } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { motion, AnimatePresence } from "framer-motion";
+import { Menu, X } from "lucide-react";
 
 const navLinks = [
-  { href: "/#approach", label: "Approach" },
   { href: "/#services", label: "Services" },
-  { href: "/#smb", label: "Small Business" },
-  { href: "/#consulting", label: "Consulting" },
-  { href: "/#coaching", label: "Coaching" },
+  { href: "/#work", label: "Work" },
   { href: "/blog", label: "Blog" },
   { href: "/#contact", label: "Contact" },
 ];
 
+const EASE: [number, number, number, number] = [0.22, 1, 0.36, 1];
+
 export default function Navbar() {
-  const [scrolled, setScrolled] = useState(false);
+  const pathname = usePathname();
+  const isHome = pathname === "/";
   const [mobileOpen, setMobileOpen] = useState(false);
 
-  useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 20);
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
-  useEffect(() => {
-    document.body.style.overflow = mobileOpen ? "hidden" : "";
-    return () => {
-      document.body.style.overflow = "";
-    };
-  }, [mobileOpen]);
-
   return (
-    <>
-      <nav
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-          scrolled
-            ? "bg-[rgba(250,249,246,0.92)] backdrop-blur-xl border-b border-border-light shadow-sm"
-            : "bg-[rgba(250,249,246,0.92)] backdrop-blur-xl border-b border-border-light"
-        }`}
-      >
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="flex h-18 items-center justify-between">
-            {/* Logo */}
-            <Link href="/" className="flex items-center gap-2.5">
-              <div className="relative w-2.5 h-2.5 rounded-full bg-rivet shadow-[0_0_6px_rgba(184,148,46,0.4)]">
-                <div className="absolute inset-[2px] rounded-full bg-[radial-gradient(circle_at_35%_35%,rgba(255,255,255,0.4),transparent)]" />
-              </div>
-              <span className="font-display text-[1.6rem] tracking-[0.15em] text-foreground">
-                RIVETED, INC.
-              </span>
-            </Link>
+    <motion.header
+      initial={isHome ? { y: "45vh", opacity: 0 } : { opacity: 0 }}
+      animate={isHome ? { y: 0, opacity: 1 } : { opacity: 1 }}
+      transition={{ duration: 1, ease: EASE }}
+      className="fixed top-0 left-0 right-0 z-50 p-6 md:px-12 md:py-8 pointer-events-none"
+    >
+      <div className="w-full max-w-[1360px] mx-auto flex justify-between items-center relative pointer-events-auto">
+        <Link
+          href="/"
+          className={`font-display text-3xl font-medium ${
+            isHome ? "text-white" : "text-foreground"
+          }`}
+        >
+          Riveted
+        </Link>
 
-            {/* Desktop Links */}
-            <ul className="hidden lg:flex items-center gap-8">
-              {navLinks.map((link) => (
-                <li key={link.href}>
-                  <Link
-                    href={link.href}
-                    className="text-foreground-light text-[0.82rem] font-medium tracking-[0.08em] uppercase transition-colors hover:text-rivet"
-                  >
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-
-            {/* Desktop CTA */}
+        {/* Desktop pill nav */}
+        <motion.nav
+          layout
+          initial={{ width: 110 }}
+          animate={{ width: "auto" }}
+          transition={{ duration: 0.8, delay: 1.1, ease: EASE }}
+          style={{ willChange: "width" }}
+          className={`hidden lg:flex ${isHome ? "bg-black/40" : "bg-black/70"} backdrop-blur-lg rounded-3xl items-center overflow-hidden h-[64px] flex-row-reverse`}
+        >
+          <div className="p-1.5 shrink-0">
             <a
               href="mailto:hello@rivetedinc.com"
-              className="hidden lg:inline-block border border-rivet text-rivet px-6 py-2.5 text-[0.8rem] font-semibold tracking-[0.1em] uppercase transition-all hover:bg-rivet hover:text-white"
+              className="h-12 px-6 rounded-full bg-white text-black text-xl font-medium flex items-center whitespace-nowrap hover:bg-neutral-100 transition-colors"
             >
               Book a Call
             </a>
-
-            {/* Mobile Toggle */}
-            <button
-              onClick={() => setMobileOpen(!mobileOpen)}
-              className="lg:hidden relative z-50 p-2 text-foreground-light hover:text-foreground"
-              aria-label="Toggle menu"
-            >
-              <svg
-                className="h-6 w-6"
-                fill="none"
-                viewBox="0 0 24 24"
-                strokeWidth={2}
-                stroke="currentColor"
-              >
-                {mobileOpen ? (
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M6 18L18 6M6 6l12 12"
-                  />
-                ) : (
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-                  />
-                )}
-              </svg>
-            </button>
           </div>
-        </div>
-      </nav>
-
-      {/* Mobile Menu */}
-      <AnimatePresence>
-        {mobileOpen && (
           <motion.div
-            initial={{ opacity: 0, x: "100%" }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: "100%" }}
-            transition={{ type: "spring", damping: 25, stiffness: 200 }}
-            className="fixed inset-0 z-40 bg-background/98 backdrop-blur-xl lg:hidden"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 1.5, duration: 0.5 }}
+            className="flex items-center gap-8 pl-8 pr-2 whitespace-nowrap"
           >
-            <div className="flex flex-col items-center justify-center h-full gap-2 px-8">
-              {navLinks.map((link, i) => (
-                <motion.div
-                  key={link.href}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: i * 0.05 + 0.1 }}
-                >
+            {navLinks.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className="text-white text-base opacity-90 hover:opacity-100 transition-opacity"
+              >
+                {link.label}
+              </Link>
+            ))}
+          </motion.div>
+        </motion.nav>
+
+        {/* Mobile toggle + dropdown */}
+        <div className="lg:hidden relative">
+          <button
+            onClick={() => setMobileOpen((o) => !o)}
+            aria-label="Toggle menu"
+            aria-expanded={mobileOpen}
+            className={`w-12 h-12 rounded-full ${isHome ? "bg-black/40" : "bg-black/70"} backdrop-blur-lg flex items-center justify-center text-white`}
+          >
+            {mobileOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          </button>
+          <AnimatePresence>
+            {mobileOpen && (
+              <motion.div
+                initial={{ opacity: 0, y: -10 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -10 }}
+                className="absolute top-full right-0 mt-3 w-60 bg-black/70 backdrop-blur-lg rounded-2xl p-4 flex flex-col gap-3"
+              >
+                {navLinks.map((link) => (
                   <Link
+                    key={link.href}
                     href={link.href}
                     onClick={() => setMobileOpen(false)}
-                    className="block px-6 py-3 text-xl font-medium text-foreground-light hover:text-rivet transition-colors"
+                    className="text-white text-base opacity-90 hover:opacity-100 transition-opacity"
                   >
                     {link.label}
                   </Link>
-                </motion.div>
-              ))}
-              <motion.a
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: navLinks.length * 0.05 + 0.1 }}
-                href="mailto:hello@rivetedinc.com"
-                className="mt-6 inline-block bg-rivet text-white px-8 py-3 text-sm font-semibold tracking-[0.1em] uppercase transition-colors hover:bg-rivet-light"
-              >
-                Book a Call
-              </motion.a>
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </>
+                ))}
+                <a
+                  href="mailto:hello@rivetedinc.com"
+                  onClick={() => setMobileOpen(false)}
+                  className="h-11 rounded-full bg-white text-black text-base font-medium flex items-center justify-center hover:bg-neutral-100 transition-colors"
+                >
+                  Book a Call
+                </a>
+              </motion.div>
+            )}
+          </AnimatePresence>
+        </div>
+      </div>
+    </motion.header>
   );
 }

@@ -1,38 +1,33 @@
 import type { Metadata } from "next";
 import Script from "next/script";
-import { DM_Sans, Bebas_Neue, Instrument_Serif } from "next/font/google";
+import { Inter_Tight, Playfair_Display } from "next/font/google";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import MotionProvider from "@/components/MotionProvider";
 import "./globals.css";
 
-const dmSans = DM_Sans({
-  variable: "--font-dm-sans",
+const interTight = Inter_Tight({
+  variable: "--font-inter-tight",
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600"],
+  weight: ["400", "500"],
 });
 
-const bebasNeue = Bebas_Neue({
-  variable: "--font-bebas-neue",
+const playfair = Playfair_Display({
+  variable: "--font-playfair",
   subsets: ["latin"],
-  weight: "400",
-});
-
-const instrumentSerif = Instrument_Serif({
-  variable: "--font-instrument-serif",
-  subsets: ["latin"],
-  weight: "400",
-  style: ["normal", "italic"],
+  weight: ["400"],
+  style: ["italic"],
 });
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://rivetedinc.com"),
-  title: "Riveted, Inc. — AI-Powered Websites & Web App Consulting",
+  title: "Riveted, Inc. — Fractional CTO & Web App Consulting",
   description:
-    "We build AI-powered websites for small businesses and partner with founders to design, build, and ship production-grade web applications.",
+    "We provide fractional CTO leadership for small businesses and partner with founders to design, build, and ship production-grade web applications.",
   keywords: [
-    "AI websites",
+    "fractional CTO",
     "web app consulting",
-    "small business websites",
+    "small business technology leadership",
     "AI assistant",
     "Intercom",
     "web development",
@@ -44,18 +39,18 @@ export const metadata: Metadata = {
     icon: "/images/favicon.svg",
   },
   openGraph: {
-    title: "Riveted, Inc. — AI-Powered Websites & Web App Consulting",
+    title: "Riveted, Inc. — Fractional CTO & Web App Consulting",
     description:
-      "We build AI-powered websites for small businesses and partner with founders to design, build, and ship production-grade web applications.",
+      "We provide fractional CTO leadership for small businesses and partner with founders to design, build, and ship production-grade web applications.",
     url: "https://rivetedinc.com",
     siteName: "Riveted, Inc.",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Riveted, Inc. — AI-Powered Websites & Web App Consulting",
+    title: "Riveted, Inc. — Fractional CTO & Web App Consulting",
     description:
-      "We build AI-powered websites for small businesses and partner with founders to design, build, and ship production-grade web applications.",
+      "We provide fractional CTO leadership for small businesses and partner with founders to design, build, and ship production-grade web applications.",
   },
 };
 
@@ -67,7 +62,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${dmSans.variable} ${bebasNeue.variable} ${instrumentSerif.variable} antialiased`}
+      className={`${interTight.variable} ${playfair.variable} antialiased`}
     >
       <head>
         <Script
@@ -89,9 +84,11 @@ export default function RootLayout({
         />
       </head>
       <body className="min-h-screen flex flex-col bg-background text-foreground">
-        <Navbar />
-        <main className="flex-1">{children}</main>
-        <Footer />
+        <MotionProvider>
+          <Navbar />
+          <main className="flex-1">{children}</main>
+          <Footer />
+        </MotionProvider>
 
         <Script
           id="intercom"

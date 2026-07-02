@@ -10,20 +10,20 @@
   --color-border-color: var(--border-color);
   --color-border-light: var(--border-light-color);
 
-  --font-sans: var(--font-dm-sans);
-  --font-display: var(--font-bebas-neue);
-  --font-serif: var(--font-instrument-serif);
+  --font-sans: 'SF Pro Rounded', ui-rounded, system-ui, sans-serif;
+  --font-display: var(--font-inter-tight);
+  --font-serif: var(--font-playfair), Georgia, serif;
 }
 
 :root {
-  --background: #faf9f6;
-  --background-alt: #f0ede6;
-  --foreground: #1a1a1a;
-  --foreground-light: #444444;
-  --rivet-color: #b8942e;
-  --rivet-light-color: #d4ad3a;
-  --border-color: #d6d3cc;
-  --border-light-color: #e8e5de;
+  --background: #ffffff;
+  --background-alt: #f1f0ef;
+  --foreground: #141413;
+  --foreground-light: #55534e;
+  --rivet-color: #887c71;
+  --rivet-light-color: #9e948b;
+  --border-color: #dbd8d3;
+  --border-light-color: #eae8e4;
 }
 
 html {
@@ -33,15 +33,19 @@ html {
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-sans), system-ui, sans-serif;
+  font-family: 'SF Pro Rounded', ui-rounded, system-ui, sans-serif;
 }
 
 ::selection {
-  background-color: rgba(184, 148, 46, 0.2);
-  color: #1a1a1a;
+  background-color: rgba(136, 124, 113, 0.25);
+  color: #141413;
 }
 
-@keyframes pulse-glow {
-  0%, 100% { box-shadow: 0 0 20px rgba(184, 148, 46, 0.15); }
-  50% { box-shadow: 0 0 35px rgba(184, 148, 46, 0.35); }
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  animation: marquee 35s linear infinite;
 }
