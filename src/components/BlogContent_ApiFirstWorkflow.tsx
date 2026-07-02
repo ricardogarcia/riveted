@@ -30,7 +30,7 @@ export default function BlogContent_ApiFirstWorkflow() {
       </FadeIn>
 
       <FadeIn delay={0.1}>
-        <h2 className="font-[family-name:var(--font-instrument-serif)] text-[1.6rem] text-foreground mt-10 mb-4 font-normal">
+        <h2 className="font-display text-[1.6rem] text-foreground mt-10 mb-4 font-normal">
           Why Backend First?
         </h2>
         <p className="text-[1.05rem] leading-[1.9] text-foreground-light">
@@ -56,7 +56,7 @@ export default function BlogContent_ApiFirstWorkflow() {
       </FadeIn>
 
       <FadeIn delay={0.1}>
-        <h2 className="font-[family-name:var(--font-instrument-serif)] text-[1.6rem] text-foreground mt-10 mb-4 font-normal">
+        <h2 className="font-display text-[1.6rem] text-foreground mt-10 mb-4 font-normal">
           Router Files as Living Documentation
         </h2>
         <p className="text-[1.05rem] leading-[1.9] text-foreground-light">
@@ -108,7 +108,7 @@ async def set_permissions(
       </FadeIn>
 
       <FadeIn delay={0.1}>
-        <h2 className="font-[family-name:var(--font-instrument-serif)] text-[1.6rem] text-foreground mt-10 mb-4 font-normal">
+        <h2 className="font-display text-[1.6rem] text-foreground mt-10 mb-4 font-normal">
           A Real Workflow Example
         </h2>
         <p className="text-[1.05rem] leading-[1.9] text-foreground-light">
@@ -161,7 +161,7 @@ async def set_permissions(
       </FadeIn>
 
       <FadeIn delay={0.1}>
-        <h2 className="font-[family-name:var(--font-instrument-serif)] text-[1.6rem] text-foreground mt-10 mb-4 font-normal">
+        <h2 className="font-display text-[1.6rem] text-foreground mt-10 mb-4 font-normal">
           The Peer Repository Trick
         </h2>
         <p className="text-[1.05rem] leading-[1.9] text-foreground-light">
@@ -205,7 +205,7 @@ async def set_permissions(
       </FadeIn>
 
       <FadeIn delay={0.1}>
-        <h2 className="font-[family-name:var(--font-instrument-serif)] text-[1.6rem] text-foreground mt-10 mb-4 font-normal">
+        <h2 className="font-display text-[1.6rem] text-foreground mt-10 mb-4 font-normal">
           What This Actually Eliminates
         </h2>
         <p className="text-[1.05rem] leading-[1.9] text-foreground-light">
@@ -247,7 +247,7 @@ async def set_permissions(
       </FadeIn>
 
       <FadeIn delay={0.1}>
-        <h2 className="font-[family-name:var(--font-instrument-serif)] text-[1.6rem] text-foreground mt-10 mb-4 font-normal">
+        <h2 className="font-display text-[1.6rem] text-foreground mt-10 mb-4 font-normal">
           Making It Work with AI Tools
         </h2>
         <p className="text-[1.05rem] leading-[1.9] text-foreground-light">
@@ -284,7 +284,7 @@ async def set_permissions(
       </FadeIn>
 
       <FadeIn delay={0.1}>
-        <h2 className="font-[family-name:var(--font-instrument-serif)] text-[1.6rem] text-foreground mt-10 mb-4 font-normal">
+        <h2 className="font-display text-[1.6rem] text-foreground mt-10 mb-4 font-normal">
           The Bottom Line
         </h2>
         <p className="text-[1.05rem] leading-[1.9] text-foreground-light">

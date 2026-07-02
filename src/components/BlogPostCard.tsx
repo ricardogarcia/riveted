@@ -23,7 +23,7 @@ export default function BlogPostCard({
   return (
     <FadeIn delay={index * 0.1}>
       <Link href={`/blog/${post.slug}`} className="block group">
-        <div className="border border-border-light rounded-lg p-6 sm:p-8 transition-all duration-300 hover:border-border-color hover:shadow-[0_4px_24px_rgba(0,0,0,0.04)]">
+        <div className="border border-border-light rounded-2xl p-6 sm:p-8 transition-all duration-300 hover:border-border-color hover:shadow-[0_4px_24px_rgba(0,0,0,0.04)]">
           <div className="flex flex-wrap items-center gap-3 mb-4">
             <time
               dateTime={post.date}
@@ -37,7 +37,7 @@ export default function BlogPostCard({
             </span>
           </div>
 
-          <h2 className="font-[family-name:var(--font-instrument-serif)] text-[1.4rem] sm:text-[1.6rem] text-foreground mb-3 font-normal group-hover:text-rivet transition-colors">
+          <h2 className="font-display text-[1.4rem] sm:text-[1.6rem] text-foreground mb-3 font-normal group-hover:text-rivet transition-colors">
             {post.title}
           </h2>
 

@@ -35,7 +35,7 @@ export default function BlogPage() {
               Blog
             </span>
           </div>
-          <h1 className="font-[family-name:var(--font-instrument-serif)] text-[clamp(2rem,4vw,3rem)] text-foreground font-normal leading-tight">
+          <h1 className="font-display text-[clamp(2rem,4vw,3rem)] text-foreground font-normal leading-tight">
             Ideas, Insights, and the Occasional Hot Take
           </h1>
           <p className="mt-4 text-foreground-light text-lg max-w-2xl leading-relaxed">

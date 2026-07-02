@@ -37,7 +37,7 @@ export default function BlogContent_AiChatbots90Days() {
       </FadeIn>
 
       <FadeIn delay={0.1}>
-        <h2 className="font-[family-name:var(--font-instrument-serif)] text-[1.6rem] text-foreground mt-10 mb-4 font-normal">
+        <h2 className="font-display text-[1.6rem] text-foreground mt-10 mb-4 font-normal">
           The Cost of Doing Nothing
         </h2>
         <p className="text-[1.05rem] leading-[1.9] text-foreground-light">
@@ -67,7 +67,7 @@ export default function BlogContent_AiChatbots90Days() {
       </FadeIn>
 
       <FadeIn delay={0.1}>
-        <h2 className="font-[family-name:var(--font-instrument-serif)] text-[1.6rem] text-foreground mt-10 mb-4 font-normal">
+        <h2 className="font-display text-[1.6rem] text-foreground mt-10 mb-4 font-normal">
           What an AI Assistant Actually Costs
         </h2>
         <p className="text-[1.05rem] leading-[1.9] text-foreground-light">
@@ -97,7 +97,7 @@ export default function BlogContent_AiChatbots90Days() {
       </FadeIn>
 
       <FadeIn delay={0.1}>
-        <h2 className="font-[family-name:var(--font-instrument-serif)] text-[1.6rem] text-foreground mt-10 mb-4 font-normal">
+        <h2 className="font-display text-[1.6rem] text-foreground mt-10 mb-4 font-normal">
           What the AI Assistant Actually Does
         </h2>
         <p className="text-[1.05rem] leading-[1.9] text-foreground-light">
@@ -141,7 +141,7 @@ export default function BlogContent_AiChatbots90Days() {
       </FadeIn>
 
       <FadeIn delay={0.1}>
-        <h2 className="font-[family-name:var(--font-instrument-serif)] text-[1.6rem] text-foreground mt-10 mb-4 font-normal">
+        <h2 className="font-display text-[1.6rem] text-foreground mt-10 mb-4 font-normal">
           The 90-Day Math
         </h2>
         <p className="text-[1.05rem] leading-[1.9] text-foreground-light">
@@ -185,7 +185,7 @@ export default function BlogContent_AiChatbots90Days() {
       </FadeIn>
 
       <FadeIn delay={0.1}>
-        <h2 className="font-[family-name:var(--font-instrument-serif)] text-[1.6rem] text-foreground mt-10 mb-4 font-normal">
+        <h2 className="font-display text-[1.6rem] text-foreground mt-10 mb-4 font-normal">
           Why Most Businesses Have Not Done This Yet
         </h2>
         <p className="text-[1.05rem] leading-[1.9] text-foreground-light">
@@ -216,7 +216,7 @@ export default function BlogContent_AiChatbots90Days() {
       </FadeIn>
 
       <FadeIn delay={0.1}>
-        <h2 className="font-[family-name:var(--font-instrument-serif)] text-[1.6rem] text-foreground mt-10 mb-4 font-normal">
+        <h2 className="font-display text-[1.6rem] text-foreground mt-10 mb-4 font-normal">
           The Bottom Line
         </h2>
         <p className="text-[1.05rem] leading-[1.9] text-foreground-light">

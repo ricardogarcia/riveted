@@ -42,7 +42,7 @@ export default function BlogContent_McpGroundsLlms() {
       </FadeIn>
 
       <FadeIn delay={0.1}>
-        <h2 className="font-[family-name:var(--font-instrument-serif)] text-[1.6rem] text-foreground mt-10 mb-4 font-normal">
+        <h2 className="font-display text-[1.6rem] text-foreground mt-10 mb-4 font-normal">
           The hallucination problem isn&apos;t about intelligence
         </h2>
         <p className="text-[1.05rem] leading-[1.9] text-foreground-light">
@@ -89,7 +89,7 @@ export default function BlogContent_McpGroundsLlms() {
       </FadeIn>
 
       <FadeIn delay={0.1}>
-        <h2 className="font-[family-name:var(--font-instrument-serif)] text-[1.6rem] text-foreground mt-10 mb-4 font-normal">
+        <h2 className="font-display text-[1.6rem] text-foreground mt-10 mb-4 font-normal">
           MCP: the door out of the sealed room
         </h2>
         <p className="text-[1.05rem] leading-[1.9] text-foreground-light">
@@ -146,7 +146,7 @@ export default function BlogContent_McpGroundsLlms() {
       </FadeIn>
 
       <FadeIn delay={0.1}>
-        <h2 className="font-[family-name:var(--font-instrument-serif)] text-[1.6rem] text-foreground mt-10 mb-4 font-normal">
+        <h2 className="font-display text-[1.6rem] text-foreground mt-10 mb-4 font-normal">
           A concrete example: legal research
         </h2>
         <p className="text-[1.05rem] leading-[1.9] text-foreground-light">
@@ -249,7 +249,7 @@ export default function BlogContent_McpGroundsLlms() {
       </FadeIn>
 
       <FadeIn delay={0.1}>
-        <h2 className="font-[family-name:var(--font-instrument-serif)] text-[1.6rem] text-foreground mt-10 mb-4 font-normal">
+        <h2 className="font-display text-[1.6rem] text-foreground mt-10 mb-4 font-normal">
           Why this is an engineering answer, not just a safety answer
         </h2>
         <p className="text-[1.05rem] leading-[1.9] text-foreground-light">
@@ -315,7 +315,7 @@ export default function BlogContent_McpGroundsLlms() {
       </FadeIn>
 
       <FadeIn delay={0.1}>
-        <h2 className="font-[family-name:var(--font-instrument-serif)] text-[1.6rem] text-foreground mt-10 mb-4 font-normal">
+        <h2 className="font-display text-[1.6rem] text-foreground mt-10 mb-4 font-normal">
           The compliance frame
         </h2>
         <p className="text-[1.05rem] leading-[1.9] text-foreground-light">
