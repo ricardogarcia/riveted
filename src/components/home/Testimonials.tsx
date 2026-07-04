@@ -27,8 +27,8 @@ const TESTIMONIALS: Testimonial[] = [
       "We went from a site that just existed to one that converts every day. Riveted understood exactly what our business needed — and delivered it fast.",
     attributionName: "Marco Marano,",
     attributionRole: "Founder, Prima Pave",
-    ctaHref: "/blog",
-    ctaExternal: false,
+    ctaHref: "https://primapave.com",
+    ctaExternal: true,
   },
   {
     headlinePlain: "Riveted",
